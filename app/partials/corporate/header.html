@@ -65,62 +65,8 @@
             <nav class="collapse navbar-collapse main-navbar logo-navbar navbar-right">
                 <div class="menu-container">
                     <ul class="nav navbar-nav" id="menu-main">
-                        {% for item in [{title:"Home", href:"corporate-index.html"},
-                                        {title:"Pages", href:"#", children:[{title:"About Us", href:"corporate-about-us.html"},
-                                                                            {title:"Services", href:"corporate-services.html"},
-                                                                            {title:"Single Service", href:"corporate-single-service.html"},
-                                                                            {title:"Meet the team", href:"corporate-meet-the-team.html"},
-                                                                            {title:"404 Page", href:"corporate-404.html"},
-                                                                            {title:"Right Sidebar", href:"corporate-right-sidebar.html"},
-                                                                            {title:"Left sidebar", href:"corporate-left-sidebar.html"}
-                                        ]},
-                                        {title:"Elements", href:"#", type:"megamenu", children:[
-                                                                            {title:"Typography &#038; Layout", type:"label", size:"col-md-3", children:[
-                                                                                {title:"Basic Type", href:"corporate-elements-basic-type.html"},
-                                                                                {title:"Blockquotes", href:"corporate-elements-blockquotes.html"},
-                                                                                {title:"Font Icons", href:"corporate-elements-font-icons.html"},
-                                                                                {title:"Columns", href:"corporate-elements-columns.html"},
-                                                                                {title:"Jumbotron", href:"corporate-elements-jumbotron.html"}
-                                                                            ]},
-                                                                            {title:"Bootstrap Components", type:"label", size:"col-md-3", children:[
-                                                                                {title:"Accordions", href:"corporate-elements-accordions.html"},
-                                                                                {title:"Tabs", href:"corporate-elements-tabs.html"},
-                                                                                {title:"Buttons", href:"corporate-elements-buttons.html"},
-                                                                                {title:"Panels", href:"corporate-elements-panels.html"},
-                                                                                {title:"Tables", href:"corporate-elements-tables.html"}
-                                                                            ]},
-                                                                            {title:"Misc", type:"label", size:"col-md-3", children:[
-                                                                                {title:"Pricing", href:"corporate-elements-pricing.html"},
-                                                                                {title:"Feature font icons", href:"corporate-elements-feature-font-icons.html"},
-                                                                                {title:"Features lists", href:"corporate-elements-features-lists.html"},
-                                                                                {title:"Scroll buttons", href:"corporate-elements-scroll-buttons.html"}
-                                                                            ]},
-                                                                            {title:"Infographic Elements", type:"label", size:"col-md-3", children:[
-                                                                                {title:"Charts", href:"corporate-elements-charts.html"},
-                                                                                {title:"Counters", href:"corporate-elements-features-counters.html"},
-                                                                                {title:"Countdown timers", href:"corporate-elements-countdown-timers.html"},
-                                                                                {title:"Pie Charts", href:"corporate-elements-pie-charts.html"},
-                                                                                {title:"Progress Bars", href:"corporate-elements-progress-bars.html"}
-                                                                            ]}
-                                        ]},
-                                        {title:"Portfolio", href:"#", children:[{title:"2 columns", href:"corporate-portfolio-2-columns.html"},
-                                                                                {title:"3 columns", href:"corporate-portfolio-3-columns.html"},
-                                                                                {title:"4 columns", href:"corporate-portfolio-4-columns.html"},
-                                                                                {title:"Masonry", href:"corporate-portfolio-masonry.html"},
-                                                                                {title:"Fullwidth", href:"corporate-portfolio-fullwidth.html"},
-                                                                                {title:"Standard Item", href:"corporate-standard-item.html"},
-                                                                                {title:"Gallery Item", href:"corporate-gallery-item.html"},
-                                                                                {title:"Video Item", href:"corporate-video-item.html"}
-                                        ]},
-                                        {title:"Blog", href:"#", children:[ {title:"Right Sidebar", href:"corporate-blog-right-sidebar.html"},
-                                                                            {title:"Left Sidebar", href:"corporate-blog-left-sidebar.html"},
-                                                                            {title:"No Sidebars &#8211; Wide", href:"corporate-no-sidebar-wide.html"},
-                                                                            {title:"No Sidebars &#8211; Regular", href:"corporate-no-sidebar.html"},
-                                                                            {title:"No Sidebars &#8211; Narrow", href:"corporate-no-sidebar-narrow.html"},
-                                                                            {title:"Masonry", href:"corporate-blog-masonry.html"},
-                                                                            {title:"Standard Post", href:"corporate-standard-post.html"},
-                                                                            {title:"Gallery Post", href:"corporate-gallery-post.html"}
-                                        ]},
+                        {% for item in [{title:"Home", href:"index.html"},
+                                        {title:"Portfolio", href:"corporate-portfolio-fullwidth.html"},
                                         {title:"Contact", href:"corporate-contact.html"}] %}
                         <li class="menu-item {{ 'active' if activeMenu == item.title }} {{ 'dropdown' if item.href == '#'}} {{ 'menu-item-object-oxy_mega_menu' if 'megamenu' == item.type }}">
                             <a {{ 'class="dropdown-toggle" data-toggle="dropdown"' if item.href == '#' }} href="/{{ item.href }}">{{ item.title }}</a>
@@ -151,7 +97,7 @@
                     </ul>
                 </div>
 
-                <div class="menu-sidebar">
+                <!--<div class="menu-sidebar">
                     <div class="sidebar-widget widget_search" id="search-5">
                         <form action="../../index.html" method="get" name="searchform">
                             <div class="input-group">
@@ -166,7 +112,7 @@
                             </div>
                         </form>
                     </div>
-                </div>
+                </div>-->
             </nav>
         </div>
     </div>
