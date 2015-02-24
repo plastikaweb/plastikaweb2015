@@ -1,0 +1,41 @@
+{% extends "layouts/base.html" %}
+
+{% set bodyclasses = "pace-on pace-counter" %}
+
+{% set gotopshape = "circle" %}
+
+{% block fonts %}
+    <link href="//fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,900%7CGentium+Basic:400italic&amp;subset=latin,latin" rel="stylesheet" type="text/css">
+{% endblock %}
+
+{% block skin %}
+    <!-- build:css assets/css/corporate.min.css -->
+    <link rel="stylesheet" href="styles/skins/corporate.css" type="text/css">
+    <!-- endbuild -->
+{% endblock %}
+
+{% block header %}
+    {% include "partials/corporate/header.html" %}
+{% endblock %}
+
+{% block jsparams %}
+<script type="text/javascript">
+	var oxyThemeData = {
+	    navbarHeight : 100,
+	    navbarScrolled : 90,
+	    navbarScrolledPoint : 20,
+	    menuClose : 'off',
+	    scrollFinishedMessage : 'No more items to load.',
+	    hoverMenu : {
+	        hoverActive : false,
+	        hoverDelay : 1,
+	        hoverFadeDelay : 200
+	    },
+	    siteLoader: 'on'
+	};
+</script>
+{% endblock %}
+
+{% block footer %}
+    {% include "partials/corporate/footer.html" %}
+{% endblock %}

@@ -1,0 +1,97 @@
+/* ----------------- */
+/* WORDPRESS CLASSES */
+/* ----------------- */
+.alignnone {
+    margin: 0px 12px 12px 0;
+}
+
+.aligncenter,
+div.aligncenter {
+    display: block;
+    margin: 0px auto;
+}
+
+.alignright {
+    float:right;
+    margin: 0px 0 12px 12px;
+}
+
+.alignleft {
+    float: left;
+    margin: 0px 12px 12px 0;
+}
+
+.aligncenter {
+    display: block;
+    margin: 0px auto;
+}
+
+a img.alignright {
+    float: right;
+    margin: 0px 0 12px 12px;
+}
+
+a img.alignnone {
+    margin: 0px 12px 0px 0;
+}
+
+a img.alignleft {
+    float: left;
+    margin: 0px 12px 0px 0;
+}
+
+a img.aligncenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
+.wp-caption, .gallery-caption {
+    text-align: center;
+    overflow: hidden;
+}
+
+.wp-caption.alignnone {
+    margin: 0px 0px 12px 0;
+    max-width: 100%;
+}
+
+.wp-caption.alignleft {
+    margin: 0px 12px 12px 0;
+}
+
+.wp-caption.alignright {
+    margin: 0px 0 12px 12px;
+}
+.wp-caption img {
+    border: 0 none;
+    height: auto;
+    margin: 4px 0 0 0;
+    max-width: 100%;
+    padding: 0;
+    width: auto;
+}
+.wp-caption p.wp-caption-text {
+    font-size: 12px;
+    line-height: 12px;
+    margin: 0;
+    padding: 12px;
+}
+.sticky {
+    display: block;
+}
+.bypostauthor {
+    display: block;
+}
+.post .pagination {
+    margin: 0px;
+}
+.wpcf7-form-control-wrap {
+  display: block !important;
+}
+
+@media screen and (min-width: 782px) {
+    .admin-bar .navbar-stuck, .admin-bar #navbar-slide {
+        top: 32px !important;
+    }
+}

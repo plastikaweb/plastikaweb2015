@@ -1,0 +1,199 @@
+/* ---------- */
+/* FLEXSLIDER */
+/* ---------- */
+
+/* - Default style - */
+.flex-container a:active, .flexslider a:active, .flex-container a:focus, .flexslider a:focus {
+	outline: none;
+}
+.flexslider .slides, .flex-control-nav, .flex-direction-nav, .slides {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.flexslider {
+	margin: 0;
+	padding: 0;
+	position: relative;
+}
+.flexslider .slides > li {
+	display: none;
+	-webkit-backface-visibility: hidden;
+}
+.flexslider .slides img {
+	width: 100%;
+	display: block;
+	margin: 0 auto;
+}
+.flexslider .slides blockquote img {
+  max-width: 100%;
+  width: auto;
+}
+.flex-pauseplay span {
+	text-transform: capitalize;
+}
+
+.slides:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+html[xmlns] .slides {
+	display: block;
+}
+* html .slides {
+	height: 1%;
+}
+.no-js .slides > li:first-child {
+	display: block;
+}
+
+
+/* - Theme styles - */
+
+/* --  Flex Controls -- */
+.flex-control-nav {
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  margin-top: 12px;
+  margin-bottom: 12px;
+  line-height: 1;
+  li {
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    z-index: 1000;
+    line-height: 1;
+  }
+  a {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    @include border-radius(50%);
+    text-indent: -9000em;
+    @include transition(background .5s, box-shadow .3s);
+    margin: 0 8px;
+    vertical-align: middle;
+    text-align: left;
+  }
+  .flex-controls-left & {
+    left: 24px;
+  }
+  .flex-controls-right & {
+    right: 24px;
+    text-align: right;
+  }
+  .flex-controls-center & {
+    width: 100%;
+    text-align: center;
+  }
+  .flex-controls-top & {
+    bottom: auto;
+    top: 0;
+  }
+}
+.flex-controls-outside .flex-control-nav {
+  position: relative;
+  width: 100%;
+  left: 0;
+  margin: 0;
+}
+
+
+/* -- Flex Direction arrows -- */
+.flex-direction-nav a {
+  display: block;
+  position: absolute;
+  font-size: 16px;
+  width: 24px;
+  height: 24px;
+  top: 50%;
+  margin-top: -0.5em;
+  font-family: 'FontAwesome';
+  text-align: center;
+  vertical-align: middle;
+  line-height: 24px;
+  z-index: 3;
+  &:before {
+    display: inline-block;
+  }
+}
+.flex-prev {
+  left: 0;
+  &:before {
+    content: "\f104";
+  }
+}
+.flex-next {
+  right: 0;
+  &:before {
+    content: "\f105";
+  }
+}
+
+/* -- Flex Figcaptions -- */
+.flexslider  {
+  margin-top: 0;
+  figure{
+    position: relative;
+    margin: 0;
+  }
+  figcaption {
+    display: inline-block;
+    position: absolute;
+    bottom: 48px;
+    left: 24px;
+    padding: 12px;
+    max-width: 400px;
+    h3 {
+      margin-top: 0;
+    }
+    p {
+      margin-top: 0px;
+      margin-bottom: 0;
+    }
+  }
+  &.flex-caption-right figcaption {
+    left: auto;
+    right: 24px;
+  }
+  &.flex-caption-alternate li:nth-child(even) figcaption {
+    left: 24px;
+    right: auto;
+  }
+  &.flex-caption-alternate li:nth-child(odd) figcaption {
+    right: 24px;
+    left: auto;
+  }
+}
+@media (max-width: 480px) {
+  .flexslider figcaption {
+    display: none;
+  }
+}
+
+/* -- Flex items fix for tooptips -- */
+[data-flex-itemwidth] {
+  margin-top: -36px;
+  text-align: center;
+  .slides > li > a, .slides > li > figure {
+    padding-top: 36px;
+    display: inline-block;
+    max-width: 100%;
+  }
+  .flex-prev, .flex-next {
+    margin-top: -0px;
+  }
+}
+
+/* - Flexslider blockquotes - */
+.flexslider blockquote {
+  margin-bottom: 24px;
+}
+

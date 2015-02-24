@@ -1,0 +1,293 @@
+{% extends "layouts/corporate.html" %}
+
+{% set title = "Portfolio – 4 columns|Corporate" %}
+{% set activeMenu = "Portfolio" %}
+
+{% block content %}
+<article>
+    <section class="section">
+        <div class="background-overlay" style=
+        "background-color: rgba(1,192,225,1);"></div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1 class="text-left element-top-70 element-bottom-70 text-light big">Portfolio &#8211; 4 columns</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="portfolio-container element-top-50 element-bottom-50">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="portfolio-header clearfix">
+                                    <h3 class="portfolio-title pull-left"><strong>View /</strong>
+                                        <span>All</span>
+                                    </h3>
+                                    <div class="portfolio-filters pull-right">
+                                        <div class="btn-group">
+                                            <button class="btn btn-primary dropdown-toggle btn-icon-right btn-sm" data-toggle="dropdown" type="button"><b>Sort</b>
+                                                <span>
+                                                    <i class="fa fa-angle-down"></i>
+                                                </span>
+                                            </button>
+
+                                            <ul class="dropdown-menu pull-right">
+                                                <li>
+                                                    <a class="portfolio-sort" data-sort="default">Default</a>
+                                                </li>
+
+                                                <li>
+                                                    <a class="portfolio-sort" data-sort="title">Title</a>
+                                                </li>
+
+                                                <li>
+                                                    <a class="portfolio-sort" data-sort="date">Date</a>
+                                                </li>
+
+                                                <li>
+                                                    <a class="portfolio-sort" data-sort="comments">Comments</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="btn-group">
+                                            <button class="btn btn-primary dropdown-toggle btn-icon-right btn-sm" data-toggle="dropdown" type="button"><b>Order</b>
+                                                <span>
+                                                    <i class="fa fa-angle-down"></i>
+                                                </span>
+                                            </button>
+
+                                            <ul class="dropdown-menu pull-right">
+                                                <li>
+                                                    <a class="portfolio-order" data-value="true">Ascending</a>
+                                                </li>
+
+                                                <li>
+                                                    <a class="portfolio-order" data-value=
+                                                    "false">Descending</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="btn-group">
+                                            <button class="btn btn-primary dropdown-toggle btn-icon-right btn-sm"
+                                            data-toggle="dropdown" type="button"><b>Category</b>
+                                                <span>
+                                                    <i class="fa fa-angle-down"></i>
+                                                </span>
+                                            </button>
+
+                                            <ul class="dropdown-menu pull-right">
+                                                <li>
+                                                    <a class="portfolio-filter" data-filter="*">All</a>
+                                                </li>
+
+                                                <li>
+                                                    <a class="portfolio-filter" data-filter=
+                                                    ".filter-drinks">Drinks</a>
+                                                </li>
+
+                                                <li>
+                                                    <a class="portfolio-filter" data-filter=
+                                                    ".filter-nature">Nature</a>
+                                                </li>
+
+                                                <li>
+                                                    <a class="portfolio-filter" data-filter=
+                                                    ".filter-people">People</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="portfolio masonry no-transition"
+                        data-col-lg="4" data-col-md="4" data-col-sm="2"
+                        data-col-xs="2" data-layout="fitRows" data-padding="20">
+                            <div class="masonry-item portfolio-item filter-drinks filter-people" data-menu-order="0" data-date="2014-09-23T01:03:17+00:00" data-title="Corporate animation" data-comments="0">
+                                <div class="figure portfolio-os-animation image-filter-none image-filter-onhover fade-in from-right text-center figcaption-middle normalwidth"
+                                data-os-animation="fadeIn"
+                                data-os-animation-delay="0s">
+                                    <a class="figure-image magnific-vimeo"
+                                     href="http://vimeo.com/104566183" target="_self"><img alt="Corporate animation"
+                                    class="normalwidth" src="assets/images/corporate/p03.jpg">
+
+                                        <div class="figure-overlay">
+                                            <div class="figure-overlay-container">
+                                                <div class="figure-caption">
+                                                    <h3 class="figure-caption-title bordered bordered-small">Corporate animation</h3>
+                                                    <p class="figure-caption-description"></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="masonry-item portfolio-item filter-people" data-menu-order="1" data-date="2014-09-23T03:03:17+00:00" data-title="Freshquote co" data-comments="0">
+                                <div class="figure portfolio-os-animation image-filter-none image-filter-onhover fade-in from-right text-center figcaption-middle normalwidth"
+                                data-os-animation="fadeIn"
+                                data-os-animation-delay="0.3s">
+                                    <a class="figure-image magnific"
+                                    data-links="" href=
+                                    "assets/images/corporate/p01.jpg" target="_self"><img alt="Freshquote co"
+                                    class="normalwidth" src="assets/images/corporate/p01.jpg">
+
+                                        <div class="figure-overlay">
+                                            <div class="figure-overlay-container">
+                                                <div class="figure-caption">
+                                                    <h3 class="figure-caption-title bordered bordered-small">Freshquote co</h3>
+                                                    <p class="figure-caption-description"></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="masonry-item portfolio-item filter-people" data-menu-order="1" data-date="2014-09-23T03:03:17+00:00" data-title="Freshquote co" data-comments="0">
+                                <div class="figure portfolio-os-animation image-filter-none image-filter-onhover fade-in from-right text-center figcaption-middle normalwidth"
+                                data-os-animation="fadeIn"
+                                data-os-animation-delay="0.6s">
+                                    <a class="figure-image magnific-gallery"
+                                    data-links="assets/images/corporate/p11.jpg,images/corporate/p07.jpg,images/corporate/p12.jpg"
+                                    href="assets/images/corporate/p02.jpg"
+                                    target="_self"><img alt="Rapid Longitude branding" class=
+                                    "normalwidth" src=
+                                    "assets/images/corporate/p02.jpg">
+
+                                        <div class="figure-overlay">
+                                            <div class="figure-overlay-container">
+                                                <div class="figure-caption">
+                                                    <h3 class="figure-caption-title bordered bordered-small">Rapid Longitude branding</h3>
+                                                    <p class="figure-caption-description"></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="masonry-item portfolio-item filter-people" data-menu-order="4" data-date="2014-09-23T07:03:17+00:00" data-title="Risky Heart magazine" data-comments="0">
+                                <div class="figure portfolio-os-animation image-filter-none image-filter-onhover fade-in from-right text-center figcaption-middle normalwidth"
+                                data-os-animation="fadeIn"
+                                data-os-animation-delay="0.9s">
+                                    <a class="figure-image magnific"
+                                    data-links="" href=
+                                    "assets/images/corporate/p04.jpg"
+                                    target="_self"><img alt=
+                                    "Risky Heart magazine" class="normalwidth"
+                                    src=
+                                    "assets/images/corporate/p04.jpg">
+
+                                        <div class="figure-overlay">
+                                            <div class="figure-overlay-container">
+                                                <div class="figure-caption">
+                                                    <h3 class="figure-caption-title bordered bordered-small">Risky Heart magazine</h3>
+                                                    <p class="figure-caption-description"></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="masonry-item portfolio-item filter-people" data-menu-order="6" data-date="2014-09-23T02:03:17+00:00" data-title="Stationary Concept" data-comments="0">
+                                <div class="figure portfolio-os-animation image-filter-none image-filter-onhover fade-in from-right text-center figcaption-middle normalwidth"
+                                data-os-animation="fadeIn"
+                                data-os-animation-delay="1.2s">
+                                    <a class="figure-image magnific"
+                                    data-links="" href=
+                                    "assets/images/corporate/p05.jpg"
+                                    target="_self"><img alt=
+                                    "Stationary Concept" class="normalwidth"
+                                    src="assets/images/corporate/p05.jpg">
+
+                                        <div class="figure-overlay">
+                                            <div class="figure-overlay-container">
+                                                <div class="figure-caption">
+                                                    <h3 class="figure-caption-title bordered bordered-small">Stationary Concept</h3>
+                                                    <p class="figure-caption-description"></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="masonry-item portfolio-item filter-drinks" data-menu-order="7" data-date="2014-09-23T01:29:17+00:00" data-title="Lambda Magazine" data-comments="0">
+                                <div class="figure portfolio-os-animation image-filter-none image-filter-onhover fade-in from-right text-center figcaption-middle normalwidth"
+                                data-os-animation="fadeIn"
+                                data-os-animation-delay="1.5s">
+                                    <a class="figure-image magnific"
+                                    data-links="" href="assets/images/corporate/p06.jpg"
+                                    target="_self"><img alt="Lambda Magazine"
+                                    class="normalwidth" src="assets/images/corporate/p06.jpg">
+
+                                        <div class="figure-overlay">
+                                            <div class="figure-overlay-container">
+                                                <div class="figure-caption">
+                                                    <h3 class="figure-caption-title bordered bordered-small">Lambda Magazine</h3>
+                                                    <p class="figure-caption-description"></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="masonry-item portfolio-item filter-drinks" data-menu-order="8" data-date="2014-09-23T01:28:17+00:00" data-title="Visual identity" data-comments="0">
+                                <div class="figure portfolio-os-animation image-filter-none image-filter-onhover fade-in from-right text-center figcaption-middle normalwidth"
+                                data-os-animation="fadeIn"
+                                data-os-animation-delay="1.5s">
+                                    <a class="figure-image magnific"
+                                    data-links="" href="assets/images/corporate/p11.jpg"
+                                    target="_self"><img alt="Visual identity"
+                                    class="normalwidth" src="assets/images/corporate/p11.jpg">
+
+                                        <div class="figure-overlay">
+                                            <div class="figure-overlay-container">
+                                                <div class="figure-caption">
+                                                    <h3 class="figure-caption-title bordered bordered-small">Visual identity</h3>
+                                                    <p class="figure-caption-description"></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="masonry-item portfolio-item filter-drinks" data-title="Lambda Magazine">
+                                <div class="figure portfolio-os-animation image-filter-none image-filter-onhover fade-in from-right text-center figcaption-middle normalwidth"
+                                data-os-animation="fadeIn" data-os-animation-delay="1.5s">
+                                    <a class="figure-image magnific"
+                                    data-links="" href="assets/images/corporate/p13.jpg"
+                                    target="_self"><img alt="Yellow Yard co"
+                                    class="normalwidth" src="assets/images/corporate/p13.jpg">
+
+                                        <div class="figure-overlay">
+                                            <div class="figure-overlay-container">
+                                                <div class="figure-caption">
+                                                    <h3 class="figure-caption-title bordered bordered-small">Yellow Yard co</h3>
+                                                    <p class="figure-caption-description"></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</article>
+{% endblock %}

@@ -1,0 +1,84 @@
+// Global values
+// --------------------------------------------------
+
+//== Typography
+//
+$font-size-base:          14px;
+$line-height-base:        1.71428571428571;
+
+//== Components
+//
+$padding-base-vertical:     6px !default;
+$padding-base-horizontal:   16px !default;
+
+$padding-large-vertical:    10px !default;
+$padding-large-horizontal:  24px !default;
+
+$padding-small-vertical:    6px !default;
+$padding-small-horizontal:  16px !default;
+
+$padding-xs-vertical:       1px !default;
+$padding-xs-horizontal:     5px !default;
+
+// Grays
+// -------------------------
+$black:                 #000;
+$gray-darker:            #1c1c1c;
+$gray-dark:              #4c4c4c;
+$gray:                  #6c6c6c;
+$gray-light:             #8c8c8c;
+$gray-lighter:           #e9e9e9;
+$white:                 #fff;
+
+
+// Accent colors
+// -------------------------
+$blue:                  #82c9ed;
+$blue-dark:             #0064cd;
+$green:                 #427e77;
+$red:                   #e74c3c;
+$yellow:                #ffc40d;
+$orange:                #f4a868;
+$pink:                  #f17c72;
+$purple:                #7a43b6;
+
+// Form states and alerts
+// -------------------------
+$state-warning-text:             #65625d;
+$state-warning-bg:               #f7b244;
+$state-warning-border:           #d59939;
+
+$state-error-text:               #605655;
+$state-error-bg:                 #dd5f52;
+$state-error-border:             #a94238;
+
+$state-success-text:             #555c52;
+$state-success-bg:               #86df61;
+$state-success-border:           #67b348;
+
+$state-info-text:                #6f7c84;
+$state-info-bg:                  #7cbfec;
+$state-info-border:              #6f7c84;
+
+
+// Buttons
+// -------------------------
+$btn-default-bg:                 $gray;
+$btn-primary-bg:                 darken($red, 5);
+$btn-info-bg:                    #5d89ac;
+$btn-success-bg:                 $green;
+$btn-warning-bg:                 darken($orange, 10);
+$btn-danger-bg:                  $red;
+$btn-inverse-bg:                 #444;
+
+// Header
+// -------------------------
+$element-height: 24px;
+
+// Overrides
+$screen-md:                  992px;
+$screen-md-min:              $screen-md;
+// Point at which the navbar becomes uncollapsed
+$grid-float-breakpoint:     $screen-md-min;
+// Point at which the navbar begins collapsing
+$grid-float-breakpoint-max: ($grid-float-breakpoint - 1);

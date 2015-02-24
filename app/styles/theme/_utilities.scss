@@ -1,0 +1,65 @@
+/* --------------- */
+/* UTILITY CLASSES */
+/* --------------- */
+
+/* - Margin elements - */
+$i: 0;
+@while $i <= 300 {
+  .element-top-#{$i} {
+    margin-top: #{$i}px !important;
+  }
+  .element-bottom-#{$i} {
+    margin-bottom: #{$i}px !important;
+  }
+  $i: $i + 10;
+}
+
+/* - Height elements - */
+$i: 0;
+@while $i <= 500 {
+  .element-height-#{$i} {
+    height: #{$i}px;
+  }
+  $i: $i + 10;
+}
+
+/* - Block behaviors */
+.block {
+  display: block !important;
+}
+.inline-block {
+  display: inline-block !important;
+}
+
+/* - Clear - */
+.clear {
+  clear: both;
+}
+
+/* - Responsive images -*/
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* - List containers - */
+.list-container {
+  .col-md-2:nth-child(6n+1), .col-md-3:nth-child(4n+1), .col-md-4:nth-child(3n+1), .col-md-6:nth-child(2n+1), .col-md-2-4:nth-child(5n+1) {
+    clear: both;
+  }
+  .figure-image img {
+    width: 100%;
+  }
+}
+
+/* - FAde out content - */
+.fade-content {
+  > * {
+    opacity: 0.2;
+    -webkit-filter: blur(2px);
+    -moz-filter: blur(2px);
+    -o-filter: blur(2px);
+    -ms-filter: blur(2px);
+    filter: blur(2px);
+  }
+}

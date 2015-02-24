@@ -1,0 +1,91 @@
+/* ------------ */
+/* CONTACT PAGE */
+/* ------------ */
+
+.google-map {
+  height: 500px;
+  img {
+    max-width: inherit;
+  }
+  &.map-small {
+    height: 354px;
+  }
+}
+
+.map-overlay {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 100px;
+  .container {
+    position: relative;
+  }
+}
+.contact-details {
+  position: absolute;
+  width: 40%;
+  right: 0;
+  max-width: 400px;
+}
+
+.map-marker-label {
+  width:200px;
+  text-align:center;
+  -moz-box-sizing:border-box;
+  -webkit-box-sizing:border-box;
+  box-sizing:border-box;
+  position: relative;
+  line-height: 1.5em;
+  min-width: 280px;
+  padding: 12px;
+  box-shadow: 1px 1px 1px rgba(0,0,0,.2);
+  border-radius: 2px;
+  @include transition(all .2s);
+  -webkit-animation-delay:3s;
+  -moz-animation-delay:3s;
+  -o-animation-delay:3s;
+  animation-delay:3s;
+
+}
+.map-marker-label:before, .map-marker-label:after  {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: 100%;
+  left: 50%;
+  margin-left: -11px;
+}
+.map-marker-label:before {
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid rgba(0,0,0,.2);
+  margin-bottom: -1px;
+  margin-left: -9px;
+}
+.map-marker-label:after {
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid white;
+}
+
+@media (max-width: 767px) {
+  #map {
+    height: 200px;
+  }
+  .map-overlay {
+    position: inherit;
+    top: 0;
+    padding-bottom: 8%;
+    .container {
+      padding: 0;
+    }
+  }
+  .contact-details {
+    width: 100%;
+    max-width: 100%;
+    left: 0;
+    top: 0;
+    position: inherit;
+  }
+}

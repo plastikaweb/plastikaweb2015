@@ -1,0 +1,116 @@
+/* ----- */
+/* FORMS */
+/* ----- */
+
+/* - Form elements - */
+.form-group, .form-group:active, .form-group:focus {
+  outline: none;
+}
+.form-control,
+select,
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"],
+.uneditable-input {
+  height: 36px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  @include text-shadow(none);
+  box-shadow: none;
+  font-weight: light;
+  -webkit-font-smoothing:antialiased;
+  border-radius: 4px;
+  &:focus, &:active {
+    outline: none;
+    box-shadow: none;
+  }
+}
+.form-icon-group {
+  position: relative;
+  input, textarea {
+    text-indent: 16px;
+  }
+  i {
+    font-size: 11px;
+    display: inline-block;
+    position: absolute;
+    left: 10px;
+    top: 13px;
+  }
+}
+.input-group-btn .btn {
+  i {
+    margin: 0;
+  }
+}
+select.form-control {
+  -webkit-appearance: menulist;
+  -moz-appearance: menulist;
+  appearance: menulist;
+}
+.select-wrap {
+  position: relative;
+  display: block;
+  width: 100%;
+  vertical-align: middle;
+  select {
+    background: transparent !important;
+    position: relative;
+    z-index: 1;
+    border-radius: 0;
+    border: 0;
+    padding-right: 30px;
+    padding-left: 16px;
+    line-height: 36px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    text-indent: 0.01px;
+    text-overflow: '';
+    width: 100%;
+  }
+  select::-ms-expand {
+    display: none;
+  }
+  &:after {
+    content: "\f107";
+    font-family: FontAwesome;
+    position: absolute;
+    right: 0px;
+    width: 30px;
+    top: 0px;
+    line-height: 36px;
+    text-align: center;
+    z-index: 0;
+  }
+}
+.ie9 select {
+  border-width: 1px;
+}
+
+input[type="submit"], input[type="button"] {
+  -webkit-font-smoothing:antialiased;
+  border: 0;
+  &:focus {
+    outline: none;
+  }
+}
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+input[type=number] {
+  -moz-appearance:textfield;
+}

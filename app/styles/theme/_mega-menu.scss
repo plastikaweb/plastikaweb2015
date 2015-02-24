@@ -1,0 +1,91 @@
+/* --------- */
+/* MEGA MENU */
+/* --------- */
+
+.menu-item-object-oxy_mega_menu {
+  position: static !important;
+
+  // Rows in Mega menus
+  .dropdown-menu {
+    left: 0px !important;
+    right: 0px !important;
+    overflow: hidden;
+    background-position: center;
+    background-size: cover;
+
+    // Columns in Mega menus
+    > li {
+      position: relative;
+      &:before {
+        content: "";
+        position: absolute;
+        height: 1000px;
+        width: 1px;
+        left: 0;
+        top: 3px;
+      }
+      &:first-child:before {
+        display: none;
+      }
+
+      // Menus in Mega menu
+      > ul {
+        list-style-type: none;
+        padding: 0 0 6px;
+        overflow: hidden;
+        > li {
+          padding-bottom: 0px;
+
+          // Menu Links in Mega menus
+          > a {
+            padding: 8px 0;
+            display: block;
+            font-size: 14px;
+            @include transition(color .1s);
+          }
+        }
+      }
+
+      // Titles in Mena menus
+      > strong {
+        padding-top: 16px;
+        padding-bottom: 8px;
+        display: block;
+      }
+
+      // Descriptions in Mega menus
+      > p {
+        font-size: 14px;
+        font-style: italic;
+        padding-bottom: 12px;
+        margin-bottom: 0px;
+        border-bottom: 1px solid;
+      }
+    }
+  }
+}
+.container-fullwidth .menu-item-object-oxy_mega_menu .dropdown-menu{
+  margin-left: 15px !important;
+  margin-right: 15px !important;
+}
+
+// No dividers menu
+.oxy_mega_menu-no-dividers > ul > li:before {
+  display: none;
+}
+.oxy_mega_menu-no-dividers > ul > li > p {
+  border: 0 !important;
+}
+
+@media (max-width: 992px) {
+  .menu-item-object-oxy_mega_menu {
+    position: relative !important;
+  }
+  .menu-item-object-oxy_mega_menu .dropdown-menu {
+    background-image: none !important;
+  }
+  .menu-item-object-oxy_mega_menu .dropdown-menu >li > ul > li > a {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}

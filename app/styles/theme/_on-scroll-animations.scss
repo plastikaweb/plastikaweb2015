@@ -1,0 +1,18 @@
+/* -------------------- */
+/* ON SCROLL ANIMATIONS */
+/* -------------------- */
+
+.os-animation, .staff-os-animation, .blog-os-animation, .recent-simple-os-animation {
+  opacity: 0 !important;
+  &.animated {
+    opacity: 1 !important;
+  }
+}
+// Disable on scroll animations on IOS devices
+[class*="oxy-agent-"] .os-animation, [class*="oxy-agent-"] .data-os-animation, [class*="oxy-agent-"] .blog-os-animation, [class*="oxy-agent-"] .recent-simple-os-animation, [class*="oxy-agent-"] .staff-os-animation {
+  opacity: 1!important;
+  &.animated {
+    -webkit-animation-name: none !important;
+    animation-name: none !important;
+  }
+}

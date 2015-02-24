@@ -1,0 +1,43 @@
+/* ------------ */
+/* BASIC COLORS */
+/* ------------ */
+
+// Core variables and mixins
+
+@import "theme/compass-mixins";
+
+/* -- Sections -- */
+.section-text-shadow {
+  text-shadow: 1px 1px 0px rgba($black, .2);
+  .tooltip {
+    text-shadow: none;
+  }
+}
+.section-inner-shadow, .section-inner-shadow .background-overlay, .section-inner-shadow .background-media {
+  box-shadow: 0px 2px 2px -1px rgba($black, .25) inset, 0px -2px 2px -1px rgba($black, .25) inset;
+}
+/* -- Buttons -- */
+.ie9 select {
+  background: transparent !important;
+  color: #1c1c1c !important;
+}
+
+/* -- Progress bars -- */
+.progress {
+  background: rgba($black, .07);
+}
+.progress .progress-bar + .progress-bar {
+  @include box-shadow(none);
+}
+
+/* -- Accordions -- */
+.accordion-toggle {
+  &:after {
+    background: rgba($black, .07);
+  }
+}
+
+/* -- Audio player -- */
+.audioplayer {
+  color: $white;
+}

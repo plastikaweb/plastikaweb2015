@@ -1,0 +1,134 @@
+/* -------------------- */
+/* GENERAL LAYOUT RULES */
+/* -------------------- */
+
+/* - Content - */
+#content {
+  overflow: hidden;
+  width: 100%;
+  @include transition(opacity .2s);
+}
+
+
+/* - Container - */
+.container, .container-fullwidth {
+  position: relative;
+  z-index: 3;
+}
+.container-fullwidth {
+  &:before, &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+  .row .row {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+/* - Sections - */
+.section {
+  position: relative;
+  overflow: hidden;
+}
+
+/* -- Media sections -- */
+.background-media, .background-overlay {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0px;
+  bottom: 0;
+}
+.background-media {
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  z-index: 1;
+  overflow: hidden;
+}
+
+/* - Full height Sections - */
+.section-fullheight {
+  min-height: 100vh;
+  .container, .container-fullwidth {
+    min-height: 100vh !important;
+    > .row {
+      height: 100vh !important;
+      position: static;
+      > [class*="col-md-"]{
+        position: static;
+      }
+    }
+  }
+}
+.background-overlay {
+  z-index: 2;
+}
+
+/* -- Sections in sections -- */
+.section .section .container {
+  width: auto;
+}
+
+/* -- Media sections on mobile agents -- */
+[class*="oxy-agent-"] {
+  .background-media {
+    background-attachment: scroll !important;
+  }
+}
+
+/* - Transparent Sections - */
+.section-transparent {
+  background: none !important;
+}
+
+// Bordered columns
+.col-border-bottom {
+    border-bottom: 1px solid;
+  }
+.col-border-top {
+  border-top: 1px solid;
+}
+
+// Vertical allignment rows
+@media (min-width: 993px) {
+  .col-border-right {
+    border-right: 1px solid;
+  }
+  .col-border-bottom {
+    border-bottom: 1px solid;
+  }
+  .vertical-top, .vertical-middle, .vertical-bottom {
+    display: table;
+    width: calc(100% + 30px);
+    width: 100% \0/IE9; /* ie9 fix */
+    table-layout: fixed;
+    > * {
+      display: table-cell;
+      float: none;
+    }
+  }
+  .vertical-top > * {
+    vertical-align: top;
+  }
+  .vertical-middle > * {
+    vertical-align: middle;
+  }
+  .vertical-bottom > * {
+    vertical-align: bottom;
+  }
+}
+
+@media (max-width: 767px) {
+  .section .section .container {
+    padding: 0;
+    width: auto;
+  }
+  .container > .navbar-header, .container-fluid > .navbar-header, .container > .navbar-collapse, .container-fluid > .navbar-collapse {
+    margin-right: 0px;
+    margin-left: 0px;
+  }
+}

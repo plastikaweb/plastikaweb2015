@@ -1,0 +1,194 @@
+@function compact($var-1,        $var-2: false,
+                  $var-3: false, $var-4: false,
+                  $var-5: false, $var-6: false,
+                  $var-7: false, $var-8: false,
+                  $var-9: false, $var-10: false) {
+  $full: $var-1;
+  $vars: $var-2, $var-3, $var-4, $var-5,
+         $var-6, $var-7, $var-8, $var-9, $var-10;
+
+  @each $var in $vars {
+    @if $var {
+      $full: $full, $var;
+    }
+  }
+  @return $full;
+}
+
+// SUPPORT
+// Usually compass hacks apply to both ie6 & 7 -- set this to false to disable support for both.
+$legacy-support-for-ie: true !default;
+
+// Setting this to false will result in smaller output, but no support for ie6 hacks
+$legacy-support-for-ie6: $legacy-support-for-ie !default;
+
+// Setting this to false will result in smaller output, but no support for ie7 hacks
+$legacy-support-for-ie7: $legacy-support-for-ie !default;
+
+// Setting this to false will result in smaller output, but no support for legacy ie8 hacks
+$legacy-support-for-ie8: $legacy-support-for-ie !default;
+
+// @private
+// The user can simply set $legacy-support-for-ie and 6, 7, and 8 will be set accordingly,
+// But in case the user set each of those explicitly, we need to sync the value of
+// this combined variable.
+$legacy-support-for-ie: $legacy-support-for-ie6 or $legacy-support-for-ie7 or $legacy-support-for-ie8;
+
+// Whether to output legacy support for mozilla.
+// Usually this means hacks to support Firefox 3.6 or earlier.
+$legacy-support-for-mozilla: true;
+
+// Support for mozilla in experimental css3 properties (-moz).
+$experimental-support-for-mozilla      : true !default;
+// Support for webkit in experimental css3 properties (-webkit).
+$experimental-support-for-webkit       : true !default;
+// Support for webkit's original (non-standard) gradient syntax.
+$support-for-original-webkit-gradients : true !default;
+// Support for opera in experimental css3 properties (-o).
+$experimental-support-for-opera        : true !default;
+// Support for microsoft in experimental css3 properties (-ms).
+$experimental-support-for-microsoft    : true !default;
+// Support for khtml in experimental css3 properties (-khtml).
+$experimental-support-for-khtml        : false !default;
+// Support for svg in experimental css3 properties.
+// Setting this to true might add significant size to your
+// generated stylesheets.
+$experimental-support-for-svg          : false !default;
+// Support for CSS PIE in experimental css3 properties (-pie).
+$experimental-support-for-pie          : false !default;
+
+
+//SHARED
+// This mixin provides basic support for CSS3 properties and
+// their corresponding experimental CSS2 properties when
+// the implementations are identical except for the property
+// prefix.
+@mixin experimental($property, $value,
+  $moz      : $experimental-support-for-mozilla,
+  $webkit   : $experimental-support-for-webkit,
+  $o        : $experimental-support-for-opera,
+  $ms       : $experimental-support-for-microsoft,
+  $khtml    : $experimental-support-for-khtml,
+  $official : true
+) {
+  @if $webkit  and $experimental-support-for-webkit    { -webkit-#{$property} : $value; }
+  @if $khtml   and $experimental-support-for-khtml     {  -khtml-#{$property} : $value; }
+  @if $moz     and $experimental-support-for-mozilla   {    -moz-#{$property} : $value; }
+  @if $ms      and $experimental-support-for-microsoft {     -ms-#{$property} : $value; }
+  @if $o       and $experimental-support-for-opera     {      -o-#{$property} : $value; }
+  @if $official                                        {         #{$property} : $value; }
+}
+
+// Same as experimental(), but for cases when the property is the same and the value is vendorized
+@mixin experimental-value($property, $value,
+  $moz      : $experimental-support-for-mozilla,
+  $webkit   : $experimental-support-for-webkit,
+  $o        : $experimental-support-for-opera,
+  $ms       : $experimental-support-for-microsoft,
+  $khtml    : $experimental-support-for-khtml,
+  $official : true
+) {
+  @if $webkit  and $experimental-support-for-webkit    { #{$property} : -webkit-#{$value}; }
+  @if $khtml   and $experimental-support-for-khtml     { #{$property} :  -khtml-#{$value}; }
+  @if $moz     and $experimental-support-for-mozilla   { #{$property} :    -moz-#{$value}; }
+  @if $ms      and $experimental-support-for-microsoft { #{$property} :     -ms-#{$value}; }
+  @if $o       and $experimental-support-for-opera     { #{$property} :      -o-#{$value}; }
+  @if $official                                        { #{$property} :         #{$value}; }
+}
+
+
+// BOX SHADOW
+// The default color for box shadows
+$default-box-shadow-color: #333333 !default;
+
+// The default horizontal offset. Positive is to the right.
+$default-box-shadow-h-offset: 0px !default;
+
+// The default vertical offset. Positive is down.
+$default-box-shadow-v-offset: 0px !default;
+
+// The default blur length.
+$default-box-shadow-blur: 5px !default;
+
+// The default spread length.
+$default-box-shadow-spread : false !default;
+
+// The default shadow inset: inset or false (for standard shadow).
+$default-box-shadow-inset : false !default;
+
+// Provides cross-browser for Webkit, Gecko, and CSS3 box shadows when one or more box
+// shadows are needed.
+// Each shadow argument should adhere to the standard css3 syntax for the
+// box-shadow property.
+@mixin box-shadow(
+  $shadow-1 : default,
+  $shadow-2 : false,
+  $shadow-3 : false,
+  $shadow-4 : false,
+  $shadow-5 : false,
+  $shadow-6 : false,
+  $shadow-7 : false,
+  $shadow-8 : false,
+  $shadow-9 : false,
+  $shadow-10: false
+) {
+  @if $shadow-1 == default {
+    $shadow-1 : -compass-space-list(compact(if($default-box-shadow-inset, inset, false), $default-box-shadow-h-offset, $default-box-shadow-v-offset, $default-box-shadow-blur, $default-box-shadow-spread, $default-box-shadow-color));
+  }
+  $shadow : compact($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10);
+  @include experimental(box-shadow, $shadow,
+    -moz, -webkit, not -o, not -ms, not -khtml, official
+  );
+}
+
+// Provides a single cross-browser CSS box shadow for Webkit, Gecko, and CSS3.
+// Includes default arguments for color, horizontal offset, vertical offset, blur length, spread length, and inset.
+@mixin single-box-shadow(
+  $color  : $default-box-shadow-color,
+  $hoff   : $default-box-shadow-h-offset,
+  $voff   : $default-box-shadow-v-offset,
+  $blur   : $default-box-shadow-blur,
+  $spread : $default-box-shadow-spread,
+  $inset  : $default-box-shadow-inset
+) {
+  @if not ($inset == true or $inset == false or $inset == inset) {
+    @warn "$inset expected to be true or the inset keyword. Got #{$inset} instead. Using: inset";
+  }
+
+  @if $color == none {
+    @include box-shadow(none);
+  } @else {
+    $full   : $hoff $voff;
+    @if $blur   { $full: $full $blur;   }
+    @if $spread { $full: $full $spread; }
+    @if $color  { $full: $full $color;  }
+    @if $inset  { $full: inset $full;   }
+    @include box-shadow($full);
+  }
+}
+
+// Stripe gradient mixin
+@mixin gradient-striped($color: #555, $angle: 45deg) {
+  background-color: $color;
+  background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(.25, rgba(255,255,255,.15)), color-stop(.25, transparent), color-stop(.5, transparent), color-stop(.5, rgba(255,255,255,.15)), color-stop(.75, rgba(255,255,255,.15)), color-stop(.75, transparent), to(transparent));
+  background-image: -webkit-linear-gradient($angle, rgba(255,255,255,.15) 25%, transparent 25%, transparent 50%, rgba(255,255,255,.15) 50%, rgba(255,255,255,.15) 75%, transparent 75%, transparent);
+  background-image: -moz-linear-gradient($angle, rgba(255,255,255,.15) 25%, transparent 25%, transparent 50%, rgba(255,255,255,.15) 50%, rgba(255,255,255,.15) 75%, transparent 75%, transparent);
+  background-image: -o-linear-gradient($angle, rgba(255,255,255,.15) 25%, transparent 25%, transparent 50%, rgba(255,255,255,.15) 50%, rgba(255,255,255,.15) 75%, transparent 75%, transparent);
+  background-image: linear-gradient($angle, rgba(255,255,255,.15) 25%, transparent 25%, transparent 50%, rgba(255,255,255,.15) 50%, rgba(255,255,255,.15) 75%, transparent 75%, transparent);
+}
+
+// Vertical gradient mixin
+@mixin gradient-vertical($startColor: #555, $endColor: #333) {
+  background-color: mix($startColor, $endColor, 60%);
+  background-image: -moz-linear-gradient(top, $startColor, $endColor); // FF 3.6+
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from($startColor), to($endColor)); // Safari 4+, Chrome 2+
+  background-image: -webkit-linear-gradient(top, $startColor, $endColor); // Safari 5.1+, Chrome 10+
+  background-image: -o-linear-gradient(top, $startColor, $endColor); // Opera 11.10
+  background-image: linear-gradient(to bottom, $startColor, $endColor); // Standard, IE10
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{ie-hex-str($startColor)}', endColorstr='#{ie-hex-str($endColor)}', GradientType=0); // IE9 and down
+}
+// Reset filters for IE
+@mixin reset-filter() {
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+}

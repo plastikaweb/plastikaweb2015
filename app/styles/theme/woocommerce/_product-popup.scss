@@ -1,0 +1,149 @@
+/* -  PrettyPhoto Review Popup Container - */
+divp.stars .pp_content_container {
+  box-shadow: 0 4px 1px 0 rgba(0,0,0,0.25) !important;
+  padding: 40px 0 10px 0 !important;
+  border-radius: 0 !important;
+}
+
+.pp_content_container #respond {
+  text-align: center;
+  margin: 0 !important;
+  width: 100% !important;
+  background: 0 !important;
+  border: 0 !important;
+  padding: 0 !important;
+  overflow:hidden !important;
+  h3 {
+    border-bottom:2px solid $gray!important;
+    padding-bottom: 12px;
+  }
+}
+
+.pp_description {
+  display:none !important;
+}
+
+.pp_content_container .comment-form-author, .pp_content_container .comment-form-email, .pp_content_container .comment-form-rating, .pp_content_container .comment-form-author input, .pp_content_container .comment-form-email input {
+    width: 100%;
+    clear: both;
+    float: left;
+}
+
+.pp_content_container .comment-form-author,
+.pp_content_container .comment-form-email {
+  position:relative;
+}
+
+.pp_content_container input , .pp_content_container textarea{
+  width:95% !important;
+  border:none !important;
+  background: #ededed;
+  box-shadow: 0px 4px 0px rgba(black, .2);
+  &[type=submit]{
+    width: 50% !important;
+    background: $gray;
+    color: $white;
+    box-shadow: none;
+  }
+}
+
+/* -- review star ratings  -- */
+#review_form_wrapper .select-wrap {
+  display: none;
+}
+#review_form_wrapper p.stars {
+  height: 24px;
+}
+#review_form_wrapper p.stars:after {
+  display: block;
+  content: "\f006 \f006 \f006 \f006 \f006";
+  font-family: FontAwesome;
+  position: absolute;
+}
+
+#review_form_wrapper p.stars span {
+  width: 80px;
+  height: 24px;
+  line-height: 24px;
+  position: relative;
+  float: left;
+}
+
+p.stars span a {
+  float: left;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 16px;
+  height: 24px;
+  line-height: 24px;
+  overflow: hidden;
+  text-indent: -9000px;
+  &:after {
+    display: block;
+    top: 0;
+    left: 0;
+    position: absolute;
+    height: 24px;
+    line-height: 24px;
+    font-family: FontAwesome;
+    text-indent: 0;
+  }
+  &.active:after {
+    opacity: 0.6;
+  }
+}
+p.stars span a.star-1 {
+  width: 16px;
+  z-index: 10;
+}
+p.stars span a.star-1.active, p.stars span a.star-1:hover, p.stars span a.star-1:focus {
+  &:after {
+    width: 16px;
+    content: "\f005";
+  }
+}
+p.stars span a.star-2 {
+  width: 32px;
+  z-index: 9;
+}
+p.stars span a.star-2.active, p.stars span a.star-2:hover, p.stars span a.star-2:focus {
+  &:after {
+    width: 32px;
+    content: "\f005 \f005 " ;
+  }
+}
+p.stars span a.star-3 {
+  width: 48px;
+  z-index: 8;
+}
+p.stars span a.star-3.active, p.stars span a.star-3:hover, p.stars span a.star-3:focus {
+  &:after {
+    width: 48px;
+    content: "\f005 \f005 \f005 " ;
+  }
+}
+
+p.stars span a.star-4 {
+  width: 64px;
+  z-index: 7;
+}
+
+p.stars span a.star-4.active, p.stars span a.star-4:hover, p.stars span a.star-4:focus {
+  &:after {
+    width: 64px;
+    content: "\f005 \f005 \f005 \f005 " ;
+  }
+}
+
+p.stars span a.star-5 {
+  width: 80px;
+  z-index: 6;
+}
+
+p.stars span a.star-5.active, p.stars span a.star-5:hover, p.stars span a.star-5:focus {
+  &:after {
+    width: 80px;
+    content: "\f005 \f005 \f005 \f005 \f005 " ;
+  }
+}

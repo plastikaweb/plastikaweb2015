@@ -1,0 +1,191 @@
+/* - Mini Cart - */
+
+/* -- Basket overview -- */
+.widget_shopping_cart {
+  position: relative;
+}
+.mini-cart-overview {
+  position: static;
+  line-height: 24px;
+  margin-right: 0;
+  .icon-bag {
+    position: relative;
+    top: -2px;
+    margin-right: 16px;
+  }
+  .mini-cart-count {
+    display: block;
+    position: absolute;
+    width: 18px;
+    line-height: 18px;
+    height: 18px;
+    border-radius: 50%;
+    font-size: 12px;
+    text-align: center;
+    top: 50%;
+    left: 15px;
+    @include translateY(-18px);
+    font-size: 10px;
+  }
+  .dropdown-menu {
+    margin-bottom: 12px;
+  }
+  ul li {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+  }
+  ul li:last-child {
+    border-bottom: 0;
+  }
+  .product-mini {
+    padding: 12px 0px;
+    margin: 0px 8px;
+    position: relative;
+    min-height: 40px;
+  }
+  .product-image {
+    position: absolute;
+    left: 0;
+    img {
+      margin: 0;
+      max-width: 40px;
+    }
+  }
+  .product-details {
+    padding-left: 48px;
+    padding-right: 12px;
+  }
+  .product-details-heading {
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 1.2em;
+    font-size: 1.1em;
+    a {
+      display: inline-block;
+    }
+  }
+  .remove {
+    position: absolute;
+    display: block;
+    top: 50%;
+    right: 0;
+    @include translateY(-12px);
+    z-index: 10;
+    font-size: 20px;
+  }
+  .amount {
+    font-size: inherit;
+    line-height: inherit;
+    display: inline-block;
+  }
+  .variation {
+    margin-bottom: 0;
+  }
+  p {
+    margin-bottom: 0;
+  }
+  .total {
+    line-height: 48px;
+    text-align: center;
+  }
+  .buttons {
+    text-align: center;
+    padding-bottom: 8px;
+    a {
+      display: inline-block;
+      width: 44%;
+      text-align: center;
+      padding: 4px 12px;
+    }
+    a:first-child {
+      margin-right: 6px;
+    }
+  }
+}
+
+// Cart animations
+@-webkit-keyframes pulse-one {
+  0% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+
+  50% {
+    -webkit-transform: scale3d(1.2, 1.2, 1.2);
+    transform: scale3d(1.2, 1.2, 1.2);
+  }
+
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes pulse-one {
+  0% {
+    -webkit-transform: scale3d(1, 1, 1);
+    -ms-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+
+  50% {
+    -webkit-transform: scale3d(1.2, 1.2, 1.2);
+    -ms-transform: scale3d(1.2, 1.2, 1.2);
+    transform: scale3d(1.2, 1.2, 1.2);
+  }
+
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+    -ms-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+@-webkit-keyframes pulse-two {
+  0% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+
+  50% {
+    -webkit-transform: scale3d(1.2, 1.2, 1.2);
+    transform: scale3d(1.2, 1.2, 1.2);
+  }
+
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes pulse-two {
+  0% {
+    -webkit-transform: scale3d(1, 1, 1);
+    -ms-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+
+  50% {
+    -webkit-transform: scale3d(1.2, 1.2, 1.2);
+    -ms-transform: scale3d(1.2, 1.2, 1.2);
+    transform: scale3d(1.2, 1.2, 1.2);
+  }
+
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+    -ms-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+.pulse-one {
+  -webkit-animation-name: pulse-one;
+  animation-name: pulse-one;
+}
+.pulse-two {
+  -webkit-animation-name: pulse-two;
+  animation-name: pulse-two;
+}

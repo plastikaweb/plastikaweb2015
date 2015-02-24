@@ -1,0 +1,15 @@
+{
+    "name": "oxygenna/lambda-html",
+    "authors": [
+        {
+            "name": "proistak",
+            "email": "proistak@hotmail.com"
+        }
+    ],
+    "require": {
+        "phpmailer/phpmailer": "~5.2.8"
+    },
+    "config": {
+        "vendor-dir": "app/vendor"
+    }
+}

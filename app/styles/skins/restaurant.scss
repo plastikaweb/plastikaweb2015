@@ -1,0 +1,143 @@
+// Core variables and mixins
+@import "bootstrap/oxygenna-variables";
+@import "compass/css3";
+@import "theme/compass-mixins";
+
+
+// Skin Variables
+$font-family: 'Lato';
+$font-size: 16px;
+$font-weight: 400;
+$heading-font-family: 'Yeseva One';
+$heading-font-weight: 400;
+$heading-text-transform: none;
+$brand-font-family: 'Lato';
+$brand-font-size: 24px;
+$brand-font-weight: 300;
+$navbar-font-family: 'Gentium Book Basic';
+$navbar-font-size: 21px;
+$navbar-font-weight: 700;
+$navbar-dropdown-font-size: 16px;
+$font-weight-hairline: 400;
+$font-weight-light: 400;
+$font-weight-regular: 400;
+$font-weight-bold: 500;
+$font-weight-black: 400;
+$blog-post-title-font-size: 40px;
+$blog-post-title-font-weight: 400;
+$blog-post-font-size: 18px;
+$blog-post-font-weight: 300;
+$blockquote-font-family: 'Gentium Book Basic';
+$blockquote-font-size: 24px;
+$blockquote-font-style: italic;
+$blockquote-font-weight: 400;
+$lead-font-size: 21px;
+$lead-font-weight: 300;
+$navbar-height: 120px;
+$navbar-scrolled: 120px;
+$submenu-width: 220px;
+$navbar-border-height: 4px;
+$sidemenu-width: 270px;
+$sidemenu-nav-max-height: 600px;
+$text-color: #51575b;
+$heading-color: #cc9900;
+$link-color: #cc9900;
+$link-color-hover: #ae8816;
+$icon-color: #505050;
+$small-color: #959494;
+$text-color-alt: #ffffff;
+$heading-color-alt: rgba(255, 255, 255, 0.84);
+$link-color-alt: #ffffff;
+$link-color-hover-alt: rgba(255, 255, 255, 0.74);
+$icon-color-alt: #ffffff;
+$small-color-alt: #ffffff;
+$background-color: #ffffff;
+$background-invert: #cc9900;
+$background-complementary: rgba(0,0,0,.1);
+$nav-background: rgba(0, 0, 0, 0.87);
+$nav-link: rgba(255, 255, 255, .8);
+$nav-link-hover: #cc9900;
+$nav-link-active: #cc9900;
+$nav-brand: #ffffff;
+$nav-text: #ffffff;
+$nav-borders: rgba(13, 14, 15, .5);
+$nav-dropdown-background: rgba(68,113,122,.9);
+$nav-dropdown-link: #ffffff;
+$nav-dropdown-link-hover: rgba(255,255,255,.75);
+$nav-dropdown-text: rgba(255,255,255,.75);
+$nav-dropdown-border: rgba(0,0,0,.055);
+$nav-dropdown-separators: rgba(0,0,0,.055);
+$nav-transparent-link: #ffffff;
+$nav-transparent-link-hover: #ffffff;
+$nav-transparent-brand: #ffffff;
+$nav-transparent-text: #ffffff;
+$nav-transparent-borders: rgba(255, 255, 255, 0.1);
+$logo-background: #303C40;
+$logo-brand: #ffffff;
+$top-bar-background: #272e31;
+$top-bar-link: #ffffff;
+$top-bar-link-hover: #ffffff;
+$top-bar-text: #ffffff;
+$top-bar-borders: rgba(255, 255, 255, .1);
+$footer-background: #191919;
+$footer-link: #ffffff;
+$footer-link-hover: #ffffff;
+$footer-text: rgba(255, 255, 255, .6);
+$footer-borders: rgba(255, 255, 255, .1);
+$sub-footer-background: #000;
+$sub-footer-link: #ffffff;
+$sub-footer-link-hover: #ffffff;
+$sub-footer-text: rgba(255, 255, 255, .6);
+$sub-footer-borders: rgba(255, 255, 255, .1);
+$form-color: #3c3c3c;
+$form-background: rgba(0,0,0,.02);
+$form-borders: rgba(0,0,0,.1);
+$form-placeholder-color: #9c9c9c;
+$form-active: #cc9900;
+$primary-text: #ffffff;
+$primary-bg: #cc9900;
+$default-text: #ffffff;
+$default-bg: #4D4A51;
+$warning-text: #ffffff;
+$warning-bg: rgba(0, 0, 0, 0.64);
+$danger-text: #ffffff;
+$danger-bg: #E85543;
+$success-text: #ffffff;
+$success-bg: #008D7D;
+$info-text: #ffffff;
+$info-bg: #78A2BB;
+$border-radius-base: 0px;
+$border-radius-large: 0px;
+$border-radius-small: 0px;
+$border-radius-forms: 0px;
+$overlay-text: #ffffff;
+$overlay-bg: rgba(0, 0, 0, 0.8);
+$magnific-overlay-bg: rgba(48, 40, 64, .9);
+$magnific-close-icon: #ffffff;
+$magnific-close-bg: rgba(48, 40, 64, .9);
+$top-icon-color: #ffffff;
+$top-icon-bg: #202628;
+$slideshow-color: #ffffff;
+$slideshow-shadow: rgba(0, 0, 0, 0.2);
+$loader-color: #cc9900;
+$loader-bg: #000000;
+
+
+// Skin Creator
+@import "theme/skin";
+
+// Transparent logo switch
+@media (min-width: 992px) {
+    .transparent-header #masthead .navbar-brand {
+        background-image: url('../../assets/images/restaurant/logo-transparent.png');
+    }
+    .transparent-header #masthead .navbar-brand img {
+        visibility: hidden;
+    }
+    .transparent-header #masthead.navbar-scrolled .navbar-brand {
+        background-image: none;
+    }
+    .transparent-header #masthead.navbar-scrolled .navbar-brand img {
+        visibility: visible;
+    }
+}

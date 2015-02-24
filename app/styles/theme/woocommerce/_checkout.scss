@@ -1,0 +1,91 @@
+/* - Customer details forms - */
+.woocommerce #customer_details p {
+  margin: 0 0 10px 0;
+  &#billing_first_name_field, &#billing_email_field, &#shipping_first_name_field {
+    width: 50%;
+    display: block;
+    padding:0;
+    margin: 0 0 12px;
+    float: left;
+  }
+  &#billing_last_name_field, &#billing_phone_field, &#shipping_last_name_field {
+    width: 49%;
+    display: block;
+    padding: 0;
+    margin: 0 0 12px;
+    float: right;
+  }
+}
+#customer_details label {
+  margin-top: 12px;
+}
+
+/* - Order review on the right - */
+.woocommerce .payment_methods {
+  margin: 0 0 12px 0px;
+  padding-left: 0;
+  & li {
+    list-style: none;
+    padding-top: 5px;
+  }
+  & input {
+    margin: 0;
+  }
+
+  & input[type="text"] {
+    width: 100%;
+  }
+
+  & label {
+    display: inline-block;
+    margin-left: 5px;
+  }
+}
+
+/* - Receipt page - */
+.shop_table td {
+  vertical-align: middle !important;
+}
+.woocommerce .shop_table.order_details.table {
+  font-size: 16px;
+}
+.woocommerce .shop_table.order_details td {
+  padding: 20px;
+}
+
+.woocommerce .shop_table.order_details tfoot th {
+  padding: 20px;
+}
+
+.woocommerce .addresses address {
+  font-style:italic;
+}
+
+.order_details {
+  list-style-type: none;
+  padding-left: 0;
+  li {
+    margin-bottom: 12px;
+    padding: 12px;
+    border-bottom: 1px solid;
+  }
+}
+
+/* - Country selector - */
+.woocommerce-checkout .select-wrap {
+  display: none;
+}
+
+#ship-to-different-address {
+  margin-top: 0;
+  label {
+    display: block;
+    margin-top: 0;
+  }
+  input {
+    top: 3px;
+  }
+}
+.payment_method_paypal img {
+  margin: 0 10px;
+}

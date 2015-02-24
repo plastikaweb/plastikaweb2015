@@ -1,0 +1,21 @@
+/* ------ */
+/* FOOTER */
+/* ------ */
+.footer-columns-1 {
+  [class*="col-sm-"] {
+    text-align: center;
+  }
+}
+.footer-columns-2 {
+  [class*="col-sm-"]:last-child {
+    text-align: right;
+  }
+}
+
+@media (max-width: 767px) {
+  .footer-columns-1, .footer-columns-2 {
+    [class*="col-sm-"] {
+      text-align: left !important;
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "name": "webapp-gulp-nunckucks",
+  "private": true,
+  "dependencies": {
+    "bootstrap-sass-official": "~3.3.3",
+    "jquery": "~2.1.1",
+    "font-awesome": "4.3.0",
+    "flexslider": "*",
+    "isotope": "~1.5.25",
+    "magnific-popup": "~0.9.7",
+    "jquery-waypoints": "~3.1.0",
+    "animate.css": "~3.2.0",
+    "jquery.easy-pie-chart": "~2.1.0",
+    "imagesloaded-packaged": "~3.0.4",
+    "html5shiv": "~3.7.0",
+    "excanvas": "*",
+    "download-latest-1.x": "http://css3pie.com/download-latest-1.x",
+    "fitvids": "~1.0.3",
+    "jquery-placeholder": "~2.0.7",
+    "mediaelement": "2.15.1",
+    "jquery.scrollTo": "~1.4.7",
+    "infinite-scroll": "*",
+    "jquery.countdown": "~2.0.3",
+    "odometer": "~0.4.5",
+    "jquery-color": "~2.1.2",
+    "skrollr": "~0.6.26",
+    "chartjs": "~1.0.0",
+    "jquery-form": "~3.46.0",
+    "icons-feather": "https://github.com/puse/icons-feather",
+    "compass-mixins": "~1.0.0",
+    "pace": "~1.0.2",
+    "bigtext": "~0.1.6",
+    "jquery-ui": "~1.11.2"    
+  },
+  "resolutions": {
+    "jquery": "~2.1.1"
+  }
+}

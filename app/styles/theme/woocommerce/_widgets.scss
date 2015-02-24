@@ -1,0 +1,189 @@
+/* - Woocommerce Widgets - */
+
+/* -- Product tags -- */
+.widget_product_tag_cloud ul {
+  margin:0;
+  padding:0;
+  list-style:none;
+  @include pie-clearfix;
+  li, a {
+    float:left;
+    height:24px;
+    line-height:24px;
+    position:relative;
+  }
+  li {
+    margin-bottom: 12px;
+  }
+  a {
+    font-size:11px !important;
+    text-transform: none  !important;
+    margin-right:10px;
+    padding:0 10px;
+    text-decoration:none;
+    @include transition(all .2s);
+  }
+}
+
+/* -- Product Lists -- */
+.product_list_widget {
+  list-style-type: none;
+  padding-left: 0;
+  margin-bottom: 0;
+  li {
+    @include pie-clearfix;
+    padding-bottom: 12px;
+    margin-bottom: 12px;
+    border-bottom: 1px solid;
+  }
+  a {
+    display: block;
+  }
+  img {
+    float: left;
+    margin-right: 12px;
+    margin-top: 4px;
+    max-width: 70px;
+  }
+  .star-rating {
+    display: block;
+    float: none;
+    margin: 0;
+  }
+  .amount {
+    font-weight: bold;
+    display: inline-block;
+  }
+  del .amount {
+    font-size: 14px;
+    text-decoration: line-through;
+  }
+}
+
+/* -- Product Categories -- */
+.widget_product_categories, .widget_layered_nav{
+  ul, .children {
+    margin-left: 0px;
+    padding-left: 0px;
+    list-style-type: none;
+    margin-bottom: 0;
+  }
+  li {
+    clear: both;
+    margin-bottom: 8px;
+    position: relative;
+    border-bottom: 1px solid;
+    padding-bottom: 8px;
+  }
+  li:last-child {
+    border-bottom: 0;
+  }
+  p {
+    text-indent: 0;
+    margin-bottom: 0;
+  }
+  .children {
+    margin-top: 8px;
+    padding-top: 8px;
+    border-top: 1px solid;
+  }
+  .children li {
+    &:before {
+      content: "- ";
+    }
+  }
+  .children li:last-child {
+    border-bottom: 0;
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+  small {
+    display: inline-block;
+    font-size: 14px;
+    &:before {
+      content: "- ";
+    }
+  }
+}
+
+/* -- Product Search -- */
+.widget_product_search {
+  form {
+    position: relative;
+    margin-bottom: 0;
+  }
+  label {
+    display: none;
+  }
+  input[type=text] {
+    width: 100%;
+    box-sizing: border-box;
+    min-height: 34px;
+    margin-bottom: 0;
+  }
+  input[type=submit] {
+    position: absolute;
+    text-indent: -9000em;
+    display: block;
+    top: 1px;
+    right: 0;
+    border: 1px solid transparent;
+    height: 32px;
+    width: 32px;
+    box-shadow: none;
+    outline: none;
+
+  }
+}
+
+/* -- Price filter widget  */
+.widget_price_filter  {
+  .price_slider {
+    margin-bottom: 1em;
+    background: #eee;
+  }
+  .ui-slider {
+    position: relative;
+    text-align: left;
+  }
+  .ui-slider .ui-slider-handle {
+    position: absolute;
+    z-index: 2;
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    outline: none;
+    top: -5px;
+    border-radius: 50%;
+    display: block;
+    box-sizing: border-box;
+  }
+  .ui-slider .ui-slider-range {
+    position: absolute;
+    z-index: 1;
+    border: 0;
+  }
+  .ui-slider-horizontal {
+    height: 8px;
+    margin-bottom: 24px;
+    margin-top: 28px;
+  }
+  .ui-slider-horizontal .ui-slider-range {
+    top: 0;
+    height: 100%;
+  }
+  .ui-slider-horizontal .ui-slider-range-min {
+    left: -1px;
+  }
+  .ui-slider-horizontal .ui-slider-range-max {
+    right: -1px;
+  }
+  .button {
+    float: left;
+  }
+  .price_label {
+    display: block;
+    line-height: 32px;
+    text-align: right;
+  }
+}

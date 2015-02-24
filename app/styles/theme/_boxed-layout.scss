@@ -1,0 +1,46 @@
+/* ------------ */
+/* BOXED LAYOUT */
+/* ------------ */
+
+.layout-boxed {
+  #masthead, #content, .top-bar {
+    max-width: 1200px;
+    margin: 0 auto;
+    right: 0;
+  }
+  .sticky-wrapper {
+    background: none;
+  }
+  .container {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 1200px) {
+  .layout-boxed {
+    #masthead, #content, .top-bar {
+      max-width: 1000px;
+    }
+    #masthead.navbar-scrolled.navbar-animated {
+      margin-left: -500px;
+    }
+  }
+}
+@media (max-width: 991px) {
+  .layout-boxed {
+    #masthead, #content, .top-bar{
+      max-width: 780px;
+    }
+    #masthead.navbar-scrolled.navbar-animated {
+      margin-left: -390px;
+    }
+  }
+}
+@media (max-width: 767px) {
+  .layout-boxed {
+    #masthead.navbar-scrolled.navbar-animated {
+      left: 0;
+      margin-left: 0;
+    }
+  }
+}

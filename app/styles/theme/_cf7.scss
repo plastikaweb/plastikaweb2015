@@ -1,0 +1,18 @@
+/* -------------- */
+/* CONTACT FORM 7 */
+/* -------------- */
+
+.screen-reader-response {
+  display: none !important;
+}
+[role="alert"] {
+  font-size: 0.87em;
+  display: inline-block;
+  line-height: 2em;
+}
+.wpcf7 img.ajax-loader {
+  background: #fff;
+  margin: 0 12px;
+  opacity: 0.8;
+  border-radius: 50%;
+}

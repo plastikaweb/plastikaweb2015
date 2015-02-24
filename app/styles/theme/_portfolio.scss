@@ -1,0 +1,118 @@
+/* --------- */
+/* PORTFOLIO */
+/* --------- */
+
+/* - Portfolio Items - */
+// temporary hide untill js is ready
+.portfolio {
+  text-align: center;
+}
+.portfolio .figure {
+  text-align: initial;
+  visibility: hidden;
+  display: inline-block;
+}
+.portfolio-active .figure {
+  visibility: visible;
+}
+.isotope .figure:not(.portfolio-os-animation), .isotope .figure.animated {
+  visibility: visible;
+}
+// Disable on scroll animations on IOS devices
+[class*="oxy-agent-"] .isotope .figure {
+  visibility: visible !important;
+  &.animated {
+    -webkit-animation-name: none !important;
+    animation-name: none !important;
+  }
+}
+
+/* - Portfolio Filters - */
+.portfolio-title {
+  font-size: 14px;
+  font-weight: normal;
+  padding: 0px 20px;
+  line-height: 30px;
+  margin-bottom: 12px;
+  margin-top: 0;
+  strong {
+    font-weight: bold;
+  }
+}
+.portfolio-filters .btn-group {
+  margin-bottom: 12px;
+}
+
+/* - Portfolio Masonry - */
+.portfolio-masonry img {
+  width: 100%;
+}
+
+/* - Single Portfolio Page - */
+.portfolio-nav {
+  position: absolute;
+  right: 15px;
+  top: 0;
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: table;
+    height: 100%;
+  }
+  li {
+    display: table-cell;
+    vertical-align: middle;
+  }
+  a {
+    display: inline-block;
+  }
+  svg {
+    width: 36px;
+    vertical-align: middle;
+    height: 36px;
+  }
+}
+h1 + .portfolio-nav, .big + .portfolio-nav {
+  line-height: 48px
+}
+h2 + .portfolio-nav {
+  line-height: 36px
+}
+h3 + .portfolio-nav {
+  line-height: 27px
+}
+.bigger + .portfolio-nav {
+  line-height: 58px;
+}
+.super + .portfolio-nav {
+  line-height: 72px;
+}
+.hyper + .portfolio-nav {
+  line-height: 115px;
+}
+
+@media (max-width: 767px) {
+  .portfolio-nav {
+    position: relative;
+    right: 0;
+    margin: 0 20px !important;
+    line-height: 24px;
+    ul {
+      text-align: center;
+      height: auto;
+      width: 100%;
+    }
+    li {
+      display: inline-block;
+    }
+    svg {
+      height: 36px;
+      width: 36px;
+    }
+  }
+  // Portfolio filters
+  .portfolio-title, .portfolio-filters {
+    float: none !important;
+  }
+}

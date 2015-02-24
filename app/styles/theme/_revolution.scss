@@ -1,0 +1,43 @@
+/* ----------------- */
+/* REVOLUTION SLIDER */
+/* ----------------- */
+.tparrows {
+  font-family: 'FontAwesome';
+  text-align: center;
+  vertical-align: middle;
+  background: none !important;
+  position: relative;
+}
+.tparrows:after {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 48px;
+  height: 48px;
+  font-size: 48px;
+  line-height: 48px;
+  text-align: center;
+  color: #fff;
+  text-shadow: 1px 1px 0px rgba(0,0,0,.2);
+}
+.tp-leftarrow:after {
+  content: "\f104";
+}
+.tp-rightarrow:after {
+  content: "\f105";
+}
+.tp-bullets.simplebullets.round .bullet {
+  width: 12px;
+  height: 12px;
+  margin-left: 6px;
+  margin-right: 6px;
+  border-radius: 50%;
+  background-color: #fff;
+  background-image: none;
+  opacity: 0.8;
+  &.selected {
+    opacity: 1;
+  }
+}
+

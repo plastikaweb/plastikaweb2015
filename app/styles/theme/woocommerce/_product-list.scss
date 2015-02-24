@@ -1,0 +1,163 @@
+/* - Product List - */
+.products {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+/* -- Product item -- */
+.product {
+  position: relative;
+  @include transition(all .2s);
+  .products & {
+    margin-bottom: 24px;
+  }
+  > a:first-child {
+    display: block;
+    position: relative;
+  }
+}
+/* -- Product Image  -- */
+.product-image {
+  position: relative;
+  @include transition(all .2s);
+  overflow: hidden;
+  img {
+    margin-bottom: 0px !important;
+    @include transition(all .4s);
+    width: 100%;
+  }
+  .product-image-back {
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    opacity: 0;
+    @include transition(all 1s);
+  }
+  &:hover {
+    .product-image-back {
+      opacity: 1;
+    }
+  }
+}
+.product-image-overlay {
+  padding: 0px;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  text-align: center;
+  -webkit-transform: translateY(100%);
+  -moz-transform: translateY(100%);
+  transform: translateY(100%);
+  opacity: 0;
+  z-index: 1;
+  @include transition(all .3s .3s);
+  h4 {
+    @include transition(all .3s .5s);
+    @include translateY(10px);
+    opacity: 0;
+  }
+  .star-rating {
+    @include transition(all .3s .7s);
+    @include translateY(10px);
+    opacity: 0;
+    top: -2px;
+  }
+  .product-image:hover & {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    transform: translateY(0);
+    h4 {
+      @include translateY(0px);
+      opacity: 1;
+    }
+    .star-rating {
+      @include translateY(0px);
+      opacity: 1;
+    }
+  }
+}
+
+
+
+/* -- Product title -- */
+.products .product-title {
+  margin-top: 12px !important;
+  margin-bottom: 0px !important;
+  line-height: 24px;
+  padding-right: 44px;
+}
+.product-categories {
+  line-height: 24px;
+  display: block;
+}
+
+/* -- Onsale badge -- */
+.onsale {
+  opacity: 0;
+  display: block;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  text-transform: uppercase;
+  z-index: 1;
+  top: 0px;
+  right: -15px;
+  border-radius: 50%;
+  @include transition(all .2s);
+  -moz-animation: fadeInDown 0.75s linear;
+  -o-animation: fadeInDown 0.75s linear;
+  -webkit-animation: fadeInDown 0.75s linear;
+  animation: fadeInDown 0.75s linear;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-duration: 0.5s;
+  animation-duration: 0.5s;
+  -moz-animation-delay: 2s;
+  -o-animation-delay: 2s;
+  -webkit-animation-delay: 2s;
+  animation-delay: 2s;
+}
+
+/* -- Product info -- */
+.product-info {
+  position: relative;
+}
+/* -- Product price -- */
+.price {
+  margin: 0;
+}
+.price .from {
+  font-size: 0.9em;
+}
+.price del {
+  font-size: 0.9em;
+}
+.price ins {
+  text-decoration: none;
+}
+
+/* -- Pagination -- */
+.woocommerce-pagination {
+  display: block;
+}
+.page-numbers {
+  list-style-type: none;
+  text-align: center;
+  padding: 0;
+  letter-spacing: -5px;
+  li {
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    line-height: 36px;
+  }
+  a, span {
+    letter-spacing: 0px;
+    display: block;
+  }
+}

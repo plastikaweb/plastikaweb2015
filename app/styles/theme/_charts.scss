@@ -1,0 +1,25 @@
+/* ------ */
+/* CHARTS */
+/* ------ */
+.chart {
+  position: relative;
+  text-align: center;
+  left: 0 !important;
+  margin-left: 0 !important;
+  i {
+    display: block;
+    font-size: 3em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -0.5em;
+    margin-left: -0.5em;
+  }
+  input, span {
+    display: none;
+  }
+}
+
+.wp-chart-wrap {
+  display: inline-block;
+}

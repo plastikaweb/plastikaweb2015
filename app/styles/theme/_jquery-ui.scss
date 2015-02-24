@@ -1,0 +1,56 @@
+body > .ui-datepicker {
+  display: none;
+}
+.ui-datepicker {
+  overflow: hidden;
+}
+.ui-datepicker td, .ui-datepicker th {
+  padding: 4px 8px;
+  text-align: center;
+}
+.ui-datepicker-header {
+  text-align: center;
+  position: relative;
+  padding: 6px;
+}
+.ui-datepicker-prev, .ui-datepicker-next {
+  position: absolute;
+  width: 1.5em;
+  text-align: center;
+}
+.ui-datepicker-prev span , .ui-datepicker-next span {
+  visibility: hidden;
+}
+
+.ui-datepicker-prev {
+  left: 0;
+}
+.ui-datepicker-next {
+  right: 0;
+}
+.ui-datepicker-prev:before, .ui-datepicker-next:before {
+  font-family: FontAwesome;
+  width: 1.5em;
+  cursor: pointer;
+  display: block;
+}
+.ui-datepicker-prev:before {
+  content: "\f104";
+}
+.ui-datepicker-next:before {
+  content: "\f105";
+}
+.date-wrapper {
+  position: relative;
+}
+.date-wrapper:after {
+  content: "\f073";
+  font-family: FontAwesome;
+  position: absolute;
+  right: 0;
+  width: 30px;
+  top: 0;
+  line-height: 36px;
+  text-align: center;
+  z-index: 0;
+}

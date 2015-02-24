@@ -1,0 +1,210 @@
+/* ------------- */
+/* Gravity Forms */
+/* --------------- */
+.gform_wrapper .gsection {
+  clear: both;
+  padding: 24px 0 12px;
+  border-bottom: 1px solid;
+}
+.gform_heading {
+  margin-bottom: 24px;
+}
+.gform_footer {
+  margin-bottom: 24px;
+}
+.gform_wrapper ul {
+  padding-left: 0;
+  list-style: none;
+}
+.gform_wrapper li {
+  margin-bottom: 16px;
+  min-height: 36px;
+}
+.gform_wrapper .gfield_radio, .gform_wrapper .gfield_checkbox {
+  margin-bottom: 12px;
+}
+.gform_wrapper .gfield_radio li, .gfield_checkbox li {
+  margin-bottom: 6px;
+}
+.gform_wrapper form {
+  margin-bottom: 0;
+}
+.gform_wrapper .gfield_required {
+  padding-left: 1px;
+}
+.gform_wrapper label {
+  font-weight: normal;
+  span {
+    font-weight: lighter;
+  }
+}
+.gform_wrapper .gfield_label {
+  margin-top: 12px;
+  margin-bottom: 6px;
+  font-weight: bold;
+}
+.ginput_container input, .ginput_container select, .ginput_container textarea {
+  display: block;
+  width: 100%;
+  vertical-align: middle;
+  min-height: 36px;
+  padding-left: 6px;
+  padding-right: 6px;
+}
+.ginput_container input[type="text"], .ginput_container select, .ginput_container textarea {
+ & + label {
+    font-size: 0.8em;
+    font-weight: normal;
+  }
+}
+.ginput_container input[type="checkbox"], .ginput_container input[type="radio"] {
+  display: inline-block;
+  width: 24px;
+  margin-bottom: 6px;
+  &:focus {
+    box-shadow: none !important;
+  }
+}
+.ginput_container input:focus, .ginput_container select:focus, .ginput_container textarea:focus {
+  outline: 0;
+}
+.ginput_container input[disabled], .ginput_container select[disabled], .ginput_container textarea[disabled], .ginput_container input[readonly], .ginput_container select[readonly], .ginput_container textarea[readonly], fieldset[disabled] .ginput_container input, fieldset[disabled] .ginput_container select, fieldset[disabled] .ginput_container textarea {
+  cursor: not-allowed;
+}
+textarea.ginput_container input, textarea.ginput_container select, textarea.ginput_container textarea {
+  height: auto;
+}
+.ginput_container textarea {
+  height: auto;
+}
+.gfield_radio input[type="text"], .gfield_checkbox input[type="text"] {
+  display: inline-block;
+  width: auto;
+  margin-bottom: 0;
+}
+.gform_button:hover {
+  box-shadow: none;
+}
+.gform_button.disabled, .gform_button[disabled], fieldset[disabled] .gform_button {
+  cursor: not-allowed;
+  pointer-events: none;
+  opacity: .65;
+  filter: alpha(opacity=65);
+}
+.gform_wrapper .gfield_error input:focus, .gform_wrapper .gfield_error select:focus, .gform_wrapper .gfield_error textarea:focus {
+  outline: 0;
+}
+.validation_error {
+  padding: 6px 15px;
+  margin-bottom: 24px;
+  border: 1px solid transparent;
+}
+.validation_error h4 {
+  margin-top: 0;
+  color: inherit;
+}
+.validation_error .alert-link {
+  font-weight: bold;
+}
+.validation_error>p, .validation_error>ul {
+  margin-bottom: 0;
+}
+.validation_error>p+p {
+  margin-top: 5px;
+}
+#gforms_confirmation_message {
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+#gforms_confirmation_message h4 {
+  margin-top: 0;
+  color: inherit;
+}
+#gforms_confirmation_message .alert-link {
+  font-weight: bold;
+}
+#gforms_confirmation_message>p, #gforms_confirmation_message>ul {
+  margin-bottom: 0;
+}
+#gforms_confirmation_message>p+p {
+  margin-top: 5px;
+}
+.gf_progressbar {
+  margin-bottom: 24px;
+}
+.gf_progressbar, .gf_progressbar_percentage {
+height: 36px;
+line-height: 36px;
+}
+.gf_progressbar_percentage {
+  text-align: center;
+}
+.ginput_full, .ginput_left, .ginput_right, .gf_left_half, .gf_right_half {
+  display: block;
+  margin-bottom: 16px;
+  overflow: hidden;
+  input {
+    margin-bottom: 0;
+  }
+  label {
+    display: block;
+  }
+}
+.ginput_left, .ginput_right, .gf_left_half, .gf_right_half {
+  width: 49%;
+  display: block;
+  overflow: hidden;
+}
+.ginput_left, .gf_left_half {
+  float: left;
+}
+.ginput_right, .gf_right_half {
+  float: right;
+}
+.gform_wrapper li.gfield.gf_list_2col ul.gfield_checkbox li,
+.gform_wrapper li.gfield.gf_list_2col ul.gfield_radio li,
+.gform_wrapper li.gfield.gf_2col ul.gfield_checkbox li,
+.gform_wrapper li.gfield.gf_2col ul.gfield_radio li {
+  width: 50%;
+  float: left;
+}
+.gform_wrapper li.gfield.gf_list_3col ul.gfield_checkbox li,
+.gform_wrapper li.gfield.gf_list_3col ul.gfield_radio li,
+.gform_wrapper li.gfield.gf_3col ul.gfield_checkbox li,
+.gform_wrapper li.gfield.gf_3col ul.gfield_radio li {
+  width: 33%;
+  float: left;
+}
+.gform_wrapper li.gfield.gf_list_4col ul.gfield_checkbox li,
+.gform_wrapper li.gfield.gf_list_4col ul.gfield_radio li {
+  width: 25%;
+  float: left;
+}
+.gform_wrapper li.gfield.gf_list_5col ul.gfield_checkbox li,
+.gform_wrapper li.gfield.gf_list_5col ul.gfield_radio li {
+  width: 20%;
+  float: left;
+}
+@media (max-width: 992px) {
+  .ginput_left, .ginput_right, .gf_left_half, .gf_right_half {
+    float: none;
+    width: 100%;
+  }
+  .gform_wrapper li.gfield.gf_list_2col ul.gfield_checkbox li,
+  .gform_wrapper li.gfield.gf_list_2col ul.gfield_radio li,
+  .gform_wrapper li.gfield.gf_2col ul.gfield_checkbox li,
+  .gform_wrapper li.gfield.gf_2col ul.gfield_radio li,
+  .gform_wrapper li.gfield.gf_list_3col ul.gfield_checkbox li,
+  .gform_wrapper li.gfield.gf_list_3col ul.gfield_radio li,
+  .gform_wrapper li.gfield.gf_3col ul.gfield_checkbox li,
+  .gform_wrapper li.gfield.gf_3col ul.gfield_radio li,
+  .gform_wrapper li.gfield.gf_list_4col ul.gfield_checkbox li,
+  .gform_wrapper li.gfield.gf_list_4col ul.gfield_radio li,
+  .gform_wrapper li.gfield.gf_list_5col ul.gfield_checkbox li,
+  .gform_wrapper li.gfield.gf_list_5col ul.gfield_radio li {
+    width: 100%;
+    float: none;
+  }
+}

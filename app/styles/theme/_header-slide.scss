@@ -1,0 +1,74 @@
+/* SLIDE MENU */
+/* ---------- */
+
+// Slide elements
+.slide-menu #masthead, .slide-menu #content, .slide-menu #navbar-slide , .slide-menu .top-bar {
+  -webkit-transition: -webkit-transform .4s;
+  -moz-transition: -moz-transform .4s;
+  -ms-transition: -ms-transform .4s;
+  -o-transition: -o-transform .4s;
+  transition: transform .4s;
+  @include translate3d(0,0,0);
+}
+
+// Sidebar
+#navbar-slide {
+  position: fixed;
+  top: 0;
+  left: 100%;
+  height: 100% !important;
+  z-index: 1110;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-shadow: 5px 0px 5px -3px rgba(0,0,0,0.25) inset;
+  .navbar-right, .pull-right {
+    float: none;
+    width: 100%;
+  }
+  .navbar-brand {
+    float: none;
+    display: block;
+  }
+  .navbar-nav {
+    margin: 24px 0 48px;
+    float: none;
+    li {
+      float: none !important;
+    }
+  }
+  .navbar-nav > li > a {
+    padding: 8px 0!important;
+    line-height: 1.75;
+    &:before {
+      display: none;
+    }
+  }
+  .navbar-nav >.nav-highlight > a, .navbar-nav >.nav-highlight-ghost > a {
+    padding: 8px 20px !important;
+  }
+  .navbar-nav .open .dropdown-menu {
+    position: static;
+    float: none;
+    width: auto;
+    margin-top: 0;
+    border: 0;
+    box-shadow: none;
+  }
+}
+
+// fixes for collapsed events
+.slide-menu #masthead .navbar-header {
+  float: none;
+}
+.slide-menu .navbar-toggle {
+  display: block;
+  overflow: visible !important;
+}
+.slide-menu #navbar-slide.collapse {
+  display: block;
+}
+#navbar-slide {
+  .col-md-12, .col-md-6, .col-md-4, .col-md-3 {
+    width: 100%;
+  }
+}

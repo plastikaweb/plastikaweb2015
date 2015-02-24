@@ -1,0 +1,29 @@
+/* - Cart Page styles - */
+
+/* -- Shop Table -- */
+.shop_table {
+  td {
+    text-align: center !important;
+  }
+  th {
+    text-align: center;
+  }
+}
+
+/* -- Coupon -- */
+.coupon {
+  margin:24px 0;
+  input[type="text"] {
+    width:100%;
+  }
+}
+
+/* -- Country select box -- */
+.country-select {
+  width: 100%;
+}
+
+.shipping-calculator-button {
+  padding-top: 9px;
+  padding-bottom: 9px;
+}

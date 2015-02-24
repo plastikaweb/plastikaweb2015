@@ -1,0 +1,55 @@
+/* - Categories - */
+.product-category {
+  position: relative;
+  background: transparent;
+  a {
+    overflow: hidden;
+    display: block;
+  }
+
+  h3 {
+    line-height: 24px;
+    text-align: center;
+    margin-bottom: 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 12px;
+    @include transition(all .2s);
+    @include translateY(36px);
+
+    small {
+      display: block;
+      line-height: inherit;
+      margin-top: 12px;
+      opacity: 0;
+      @include transition(all .2s .2s);
+      @include translateY(10px);
+    }
+  }
+}
+.product-category:hover {
+  h3 {
+    @include translateY(0);
+    small {
+      opacity: 1;
+      @include translateY(0px);
+    }
+  }
+}
+.term-description {
+  margin-bottom: 48px;
+  padding-bottom: 24px;
+  text-align: center;
+  position: relative;
+  &:after {
+    display: block;
+    position: absolute;
+    content: "";
+    width: 200px;
+    height: 2px;
+    top: 100%;
+    left: 50%;
+    margin-left: -100px;
+  }
+}

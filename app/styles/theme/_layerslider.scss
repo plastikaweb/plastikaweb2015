@@ -1,0 +1,22 @@
+/* ----------- */
+/* LAYERSLIDER */
+/* ----------- */
+
+.ls-fullwidth .ls-nav-prev, .ls-fullwidth .ls-nav-next {
+  background: none !important;
+  &:after {
+    display: block;
+    width: 40px;
+    line-height: 40px;
+    font-size: 40px;
+    font-family: 'FontAwesome';
+  }
+}
+.ls-fullwidth .ls-nav-prev:after {
+  content: "\f104";
+}
+.ls-fullwidth .ls-nav-next:after {
+  content: "\f105";
+}
+
+
