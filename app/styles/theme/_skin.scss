@@ -1314,7 +1314,7 @@ input[type="button"] {
 
   .transparent-header .top-bar  {
     @include box-shadow(0 -1px 0px 0 $nav-transparent-borders inset);
-    background: none;
+    background: $sub-footer-background;
     color: $nav-transparent-text;
     a {
       color: $nav-transparent-link;

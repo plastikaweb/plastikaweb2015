@@ -3,7 +3,6 @@
 @import "compass/css3";
 @import "theme/compass-mixins";
 
-
 // Skin Variables
 $font-family: 'Raleway';
 $font-size: 14px;
@@ -33,7 +32,7 @@ $blockquote-font-style: italic;
 $blockquote-font-weight: 400;
 $lead-font-size: 21px;
 $lead-font-weight: 300;
-$navbar-height: 100px;
+$navbar-height: 125px;
 $navbar-scrolled: 90px;
 $submenu-width: 220px;
 $navbar-border-height: 3px;
@@ -48,13 +47,13 @@ $small-color: #959494;
 $text-color-alt: #ffffff;
 $heading-color-alt: #ffffff;
 $link-color-alt: #ffffff;
-$link-color-hover-alt: rgba(255, 255, 255, 0.95);
+$link-color-hover-alt: rgba(255, 255, 255, 0.85);
 $icon-color-alt: #ffffff;
 $small-color-alt: #ffffff;
 $background-color: #ffffff;
 $background-invert: #2e3333;
-$background-complementary: rgba(0,0,0,.1);
-$nav-background: #ffffff;
+$background-complementary: rgba(0, 0, 0, .1);
+$nav-background: rgba(255, 255, 255, 0.95);
 $nav-link: #1c1c1c;
 $nav-link-hover: #CD2B20;
 $nav-link-active: #CD2B20;
@@ -66,9 +65,9 @@ $nav-dropdown-link: #4c4c4c;
 $nav-dropdown-link-hover: #CD2B20;
 $nav-dropdown-text: #4c4c4c;
 $nav-dropdown-border: #CD2B20;
-$nav-dropdown-separators: rgba(0,0,0,.055);
+$nav-dropdown-separators: rgba(0, 0, 0, .055);
 $nav-transparent-link: #ffffff;
-$nav-transparent-link-hover: #ffffff;
+$nav-transparent-link-hover: #CD2B20;
 $nav-transparent-brand: #ffffff;
 $nav-transparent-text: #ffffff;
 $nav-transparent-borders: rgba(255, 255, 255, 0.1);
@@ -84,14 +83,14 @@ $footer-link: #ffffff;
 $footer-link-hover: #dddddd;
 $footer-text: rgba(255, 255, 255, .6);
 $footer-borders: rgba(255, 255, 255, .1);
-$sub-footer-background: #1c1c1c;
+$sub-footer-background: #768996;
 $sub-footer-link: #ffffff;
 $sub-footer-link-hover: #ffffff;
 $sub-footer-text: #eeeeee;
 $sub-footer-borders: rgba(255, 255, 255, .1);
 $form-color: #3c3c3c;
-$form-background: rgba(0,0,0,.02);
-$form-borders: rgba(0,0,0,.1);
+$form-background: rgba(0, 0, 0, .02);
+$form-borders: rgba(0, 0, 0, .1);
 $form-placeholder-color: #9c9c9c;
 $form-active: #CD2B20;
 $primary-text: #ffffff;
@@ -121,7 +120,6 @@ $slideshow-color: #ffffff;
 $slideshow-shadow: rgba(0, 0, 0, 0.2);
 $loader-color: #CD2B20;
 $loader-bg: #ffffff;
-
 
 // Skin Creator
 @import "theme/skin";
