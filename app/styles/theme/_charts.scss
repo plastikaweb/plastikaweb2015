@@ -6,7 +6,7 @@
   text-align: center;
   left: 0 !important;
   margin-left: 0 !important;
-  i {
+  i, img{
     display: block;
     font-size: 3em;
     position: absolute;
@@ -15,11 +15,19 @@
     margin-top: -0.5em;
     margin-left: -0.5em;
   }
+  img{
+    font-size: 7em;
+  }
   input, span {
     display: none;
   }
-}
 
+}
+.bottom-chart{
+  > *{
+    text-align: center;
+  }
+}
 .wp-chart-wrap {
   display: inline-block;
 }
