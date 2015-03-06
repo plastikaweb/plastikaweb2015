@@ -44,7 +44,7 @@
     "slug": "html5",
     "text": "Semantic web, related APIs (drag and drop, svg, video, audio, canvas).",
     "active": true,
-    "order": 4,
+    "order": 7,
     "options": {
       "barColor": "#DD8573",
       "scaleColor": "#DD8573"
@@ -83,7 +83,7 @@
     "slug": "bootstrap",
     "text": "Responsive design, mobile first approach, components configuration.",
     "active": true,
-    "order": 7,
+    "order": 5,
     "options": {
       "barColor": "#62699A",
       "scaleColor": "#62699A"
@@ -108,7 +108,7 @@
     "name": "Facebook API",
     "slug": "facebook",
     "text": "Facebook applications, using the PHP API and the javascript SDK.",
-    "active": false,
+    "active": true,
     "order": 9,
     "options": {
       "barColor": "#526884",

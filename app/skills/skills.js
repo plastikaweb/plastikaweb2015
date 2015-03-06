@@ -22,4 +22,23 @@
       });
   }
 
+  //TODO
+  //filter no active items
+  //order by order property
+  angular.module('app.skills')
+    .filter('showActive', function () {
+      return function (items) {
+        console.log(items);
+        var filtered = [];
+        angular.forEach(items, function(item){
+          if(item.active){
+
+            filtered.push(item);
+          }
+          return filtered;
+        });
+
+      };
+    });
+
 })();
