@@ -2,12 +2,8 @@
   'use strict';
 
   angular.module('app', [
-    'ngSanitize',
-    'easypiechart',
+    'app.core',
     'app.skills'
-  ]).config(function($interpolateProvider) {
-    $interpolateProvider.startSymbol('{$');
-    $interpolateProvider.endSymbol('$}');
-  });
+  ]);
 
 })();

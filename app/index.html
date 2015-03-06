@@ -6,8 +6,49 @@
 
 {% block content %}
 <article>
+
+  <section class="section  text-normal section-text-no-shadow section-inner-no-shadow section-normal section-opaque"
+           data-label="">
+    <div class="background-media"
+         style="background-image:url('assets/images/home-bg.jpg');background-repeat:no-repeat;background-size:cover;background-attachment:fixed;background-position:center 0%;"></div>
+
+    <div class="background-overlay grid-overlay-0 " style="background-color: rgba(86,154,167,0.7);"></div>
+
+    <div class="container container-vertical-default">
+      <div class="row vertical-default">
+        <div class="col-md-12  text-default small-screen-default"><h1
+          class="text-center  element-top-160 element-bottom-20 text-light os-animation bigger default animated fadeIn"
+          data-os-animation="fadeIn" data-os-animation-delay="0.1s"
+          style="-webkit-animation-delay: 0.1s; animation-delay: 0.1s;">
+          Hello, this is Carlos Matheu</h1>
+
+          <div
+            class="divider-border  divider-border-center element-top-20 element-bottom-20 os-animation animated fadeIn"
+            data-os-animation="fadeIn" data-os-animation-delay="0.2s"
+            style="-webkit-animation-delay: 0.2s; animation-delay: 0.2s;">
+            <div class="divider-border-inner" style="background:rgba(255, 255, 255, 0.87); "></div>
+          </div>
+          <div class="row ">
+            <div class="col-md-2  text-default small-screen-default"></div>
+            <div class="col-md-8  text-default small-screen-default"><h2
+              class="text-center  element-top-0 element-bottom-40 text-light os-animation normal light animated fadeIn"
+              data-os-animation="fadeIn" data-os-animation-delay="0.3s"
+              style="-webkit-animation-delay: 0.3s; animation-delay: 0.3s;">
+              I am a creative web developer specialised in Frontend, specially javascript, CSS3 and HTML5.</h2></div>
+            <div class="col-md-2  text-default small-screen-default"></div>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+
   <section class="section">
-    <div class="container" ng-controller="Skills">
+
+
+    <div class="container" ng-controller="Skills as sk">
       <div class="row">
         <div class="col-md-12">
           <h1 class="text-center element-top-70 os-animation big" data-os-animation="fadeIn"
@@ -23,11 +64,12 @@
 
           <div class="row">
 
-            <div class="col-md-3 col-sm-6" ng-repeat="skill in skills">
+            <div class="col-md-3 col-sm-6" ng-repeat="skill in sk.list">
               <div easypiechart
                    class="chart easyPieChart element-top-20 element-bottom-20 os-animation"
-                   options="skill.options" percent="skill.percent">
-                <span>{$ skill.percent $}</span> <img ng-src="assets/images/skills/{$ skill.slug $}.png"
+                   data-os-animation="fadeIn" options="skill.options" percent="skill.percent">
+                <span>{$ skill.percent $}</span>
+                <img ng-src="assets/images/skills/{$ skill.slug $}.png"
                                                     alt="{$ skill.name $}"/>
               </div>
               <div class="bottom-chart">

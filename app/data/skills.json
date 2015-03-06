@@ -7,7 +7,8 @@
     "active": true,
     "order": 1,
     "options": {
-      "barColor": "#D0CC85"
+      "barColor": "#D0CC85",
+      "scaleColor": "#D0CC85"
     },
     "percent": "80"
   },
@@ -19,7 +20,8 @@
     "active": true,
     "order": 2,
     "options": {
-      "barColor": "#B0D3E7"
+      "barColor": "#B0D3E7",
+      "scaleColor": "#B0D3E7"
     },
     "percent": "70"
   },
@@ -31,7 +33,8 @@
     "active": true,
     "order": 3,
     "options": {
-      "barColor": "#B24949"
+      "barColor": "#B24949",
+      "scaleColor": "#B24949"
     },
     "percent": "40"
   },
@@ -43,7 +46,8 @@
     "active": true,
     "order": 4,
     "options": {
-      "barColor": "#DD8573"
+      "barColor": "#DD8573",
+      "scaleColor": "#DD8573"
     },
     "percent": "65"
   },
@@ -55,7 +59,8 @@
     "active": true,
     "order": 5,
     "options": {
-      "barColor": "#6DA9C9"
+      "barColor": "#6DA9C9",
+      "scaleColor": "#6DA9C9"
     },
     "percent": "70"
   },
@@ -67,7 +72,8 @@
     "active": true,
     "order": 6,
     "options": {
-      "barColor": "#C08DA8"
+      "barColor": "#C08DA8",
+      "scaleColor": "#C08DA8"
     },
     "percent": "50"
   },
@@ -79,7 +85,8 @@
     "active": true,
     "order": 7,
     "options": {
-      "barColor": "#62699A"
+      "barColor": "#62699A",
+      "scaleColor": "#62699A"
     },
     "percent": "80"
   },
@@ -91,7 +98,8 @@
     "active": true,
     "order": 8,
     "options": {
-      "barColor": "#D2B381"
+      "barColor": "#D2B381",
+      "scaleColor": "#D2B381"
     },
     "percent": "50"
   }

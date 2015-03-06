@@ -5,28 +5,20 @@
     .module('app.skills')
     .controller('Skills', Skills);
 
-  Skills.$inject = ['$scope', 'skillsService'];
+  Skills.$inject = ['skillsService', 'CHART_OPTIONS'];
 
-  function Skills($scope, skillsService) {
+  function Skills(skillsService, CHART_OPTIONS) {
 
-   var chartOptions = {
-      trackColor: '#f9f9f9',
-      scaleColor: '#dfe0e0',
-      scaleLength: 5,
-      lineCap: 'square',
-      size: 200,
-      rotate: 0,
-      lineWidth: 20
-    };
+    var self = this;
 
     skillsService.getSkills()
       .success(function (data) {
 
-        for(var i in data){
-          data[i].options = angular.extend( data[i].options, chartOptions );
-        };
+        for (var i in data) {
+          data[i].options = angular.extend(data[i].options, CHART_OPTIONS);
+        }
 
-        $scope.skills = data;
+        self.list = data;
       });
   }
 
