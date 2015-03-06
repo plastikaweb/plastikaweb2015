@@ -102,5 +102,18 @@
       "scaleColor": "#D2B381"
     },
     "percent": "50"
+  },
+  {
+    "id": 9,
+    "name": "Facebook API",
+    "slug": "facebook",
+    "text": "Facebook applications, using the PHP API and the javascript SDK.",
+    "active": false,
+    "order": 9,
+    "options": {
+      "barColor": "#526884",
+      "scaleColor": "#526884"
+    },
+    "percent": "70"
   }
 ]
