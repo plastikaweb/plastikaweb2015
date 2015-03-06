@@ -7,13 +7,12 @@
 {% block content %}
 <article>
   <section class="section">
-
     <div class="container" ng-controller="Skills">
       <div class="row">
         <div class="col-md-12">
           <h1 class="text-center element-top-70 os-animation big" data-os-animation="fadeIn"
               data-os-animation-delay="0s">
-            Languages and skills {$ kk $}
+            Languages and skills
           </h1>
 
           <div class="divider-border divider-border-center element-top-10 element-bottom-10 os-animation"
@@ -23,152 +22,30 @@
           </div>
 
           <div class="row">
-            <div class="col-md-3 col-sm-6">
-              <div class="chart easyPieChart element-top-20 element-bottom-20 os-animation"
-                   data-bar-color="#D0CC85" data-line-width="20"
-                   data-os-animation="fadeIn" data-os-animation-delay=
-                     "0.8s" data-percent="80" data-size="200"
-                   data-track-color="#f0f0f0">
-                <span>80</span> <img src="assets/images/skills/javascript.png" alt="javascript"/>
+
+            <div class="col-md-3 col-sm-6" ng-repeat="skill in skills">
+              <div easypiechart
+                   class="chart easyPieChart element-top-20 element-bottom-20 os-animation"
+                   options="skill.options" percent="skill.percent">
+                <span>{$ skill.percent $}</span> <img ng-src="assets/images/skills/{$ skill.slug $}.png"
+                                                    alt="{$ skill.name $}"/>
               </div>
               <div class="bottom-chart">
-                <h2>javascript</h2>
+                <h2>{$ skill.name $}</h2>
 
-                <p>Object Oriented approach, DOM manipulation, Ajax development, JSON format.</p>
-              </div>
-              
-            </div>
-
-
-            <div class="col-md-3 col-sm-6">
-              <div class="chart easyPieChart element-top-20 element-bottom-20 os-animation"
-                   data-bar-color="#B0D3E7" data-line-width="20"
-                   data-os-animation="fadeIn" data-os-animation-delay=
-                     "0.8s" data-percent="70" data-size="200"
-                   data-track-color="#f0f0f0">
-                <span>70</span> <img src="assets/images/skills/jquery.png" alt="jquery"/>
-              </div>
-
-              <div class="bottom-chart"><h2>jquery</h2>
-
-              <p>DOM manipulation, Ajax calls, Promises, Events, Effects and transitions, styles manipulation.</p></div>
-            </div>
-
-
-            <div class="col-md-3 col-sm-6">
-              <div class="chart easyPieChart element-top-20 element-bottom-20 os-animation"
-                   data-bar-color="#B24949" data-line-width="20"
-                   data-os-animation="fadeIn" data-os-animation-delay=
-                     "0.8s" data-percent="45" data-size="200"
-                   data-track-color="#f0f0f0">
-                <span>45</span><img src="assets/images/skills/angularjs.png" alt="angularjs"/>
-              </div>
-
-              <div class="bottom-chart"><h2>angularjs</h2>
-
-                            <p>Single Page Applications with a robust and modular approach. Also a little of <strong>backbone.js</strong> and <strong>ember.js</strong></p></div>
-            </div>
-
-            <div class="col-md-3 col-sm-6">
-              <div class="chart easyPieChart element-top-20 element-bottom-20 os-animation"
-                   data-bar-color="#DD8573" data-line-width="20"
-                   data-os-animation="fadeIn" data-os-animation-delay=
-                     "0.8s" data-percent="70" data-size="200"
-                   data-track-color="#f0f0f0">
-                <span>70</span> <img src="assets/images/skills/html5.png" alt="html5"/>
-              </div>
-              <div class="bottom-chart">
-                <h2>HTML5</h2>
-                <p>Semantic web, related APIs (drag and drop, svg, video, audio, canvas...).</p>
+                <p ng-bind-html="skill.text"></p>
               </div>
 
             </div>
-
-          </div>
-
-          <div class="row">
-            <div class="col-md-3 col-sm-6">
-              <div class="chart easyPieChart element-top-20 element-bottom-20 os-animation"
-                   data-bar-color="#6DA9C9" data-line-width="20"
-                   data-os-animation="fadeIn" data-os-animation-delay=
-                     "0.8s" data-percent="75" data-size="200"
-                   data-track-color="#f0f0f0">
-                <span>75</span> <img src="assets/images/skills/css3.png" alt="css3"/>
-              </div>
-              <div class="bottom-chart">
-                <h2>CSS3</h2>
-
-                <p>Styles, transforms, transitions and animations, media queries.</p>
-              </div>
-
-            </div>
-
-
-            <div class="col-md-3 col-sm-6">
-              <div class="chart easyPieChart element-top-20 element-bottom-20 os-animation"
-                   data-bar-color="#C08DA8" data-line-width="20"
-                   data-os-animation="fadeIn" data-os-animation-delay=
-                     "0.8s" data-percent="45" data-size="200"
-                   data-track-color="#f0f0f0">
-                <span>45</span> <img src="assets/images/skills/sass.png" alt="sass & compass"/>
-              </div>
-
-              <div class="bottom-chart"><h2>Sass / Compass</h2>
-
-                <p>Fast processing to standard CSS. Also a little of <strong>LESS</strong>, <strong>Stylus</strong> and <strong>Susy</strong>.</p></div>
-            </div>
-
-
-            <div class="col-md-3 col-sm-6">
-              <div class="chart easyPieChart element-top-20 element-bottom-20 os-animation"
-                   data-bar-color="#62699A" data-line-width="20"
-                   data-os-animation="fadeIn" data-os-animation-delay=
-                     "0.8s" data-percent="80" data-size="200"
-                   data-track-color="#f0f0f0">
-                <span>80</span><img src="assets/images/skills/bootstrap.png" alt="Twitter bootstrap"/>
-              </div>
-
-              <div class="bottom-chart"><h2>Twitter Bootstrap</h2>
-
-                <p>Responsive design, mobile first approach, components configuration.</p></div>
-            </div>
-
-
-
-            <div class="col-md-3 col-sm-6">
-              <div class="chart easyPieChart element-top-20 element-bottom-20 os-animation"
-                   data-bar-color="#D2B381" data-line-width="20"
-                   data-os-animation="fadeIn" data-os-animation-delay=
-                     "0.8s" data-percent="55" data-size="200"
-                   data-track-color="#f0f0f0">
-                <span>55</span> <img src="assets/images/skills/laravel.png" alt="laravel"/>
-              </div>
-
-              <div class="bottom-chart"><h2>Laravel</h2>
-
-                <p>MVC PHP framework with migrations, ORM, restful controllers and more. I also worked with <strong>Codeigniter</strong>.</p></div>
-            </div>
-
-
-
-
           </div>
         </div>
       </div>
     </div>
-  </section>
-
-
-  <!-- works -->
-  <section class="section">
-
 
 
   </section>
 
-  <!-- our team -->
   <section class="section">
-
     <div class="container">
       <div class="row">
         <div class="col-md-12">

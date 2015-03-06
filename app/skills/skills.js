@@ -8,10 +8,24 @@
   Skills.$inject = ['$scope', 'skillsService'];
 
   function Skills($scope, skillsService) {
-    $scope.kk = "KKKK";
+
+   var chartOptions = {
+      trackColor: '#f9f9f9',
+      scaleColor: '#dfe0e0',
+      scaleLength: 5,
+      lineCap: 'square',
+      size: 200,
+      rotate: 0,
+      lineWidth: 20
+    };
+
     skillsService.getSkills()
       .success(function (data) {
-        console.log(data);
+
+        for(var i in data){
+          data[i].options = angular.extend( data[i].options, chartOptions );
+        };
+
         $scope.skills = data;
       });
   }

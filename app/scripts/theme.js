@@ -717,19 +717,23 @@ jQuery(document).ready(function( $ ) {
 
     // PIE Chart
     // ======================
-
+/*
     $('.chart').each( function() {
         var $chart = $(this);
-        $chart.waypoint(function() {            
+        $chart.waypoint(function() {
             $chart.easyPieChart({
                 barColor: $chart.attr('data-bar-color'),
                 trackColor: $chart.attr('data-track-color'),
                 lineWidth: $chart.attr('data-line-width'),
-                scaleColor: false,
+                scaleColor: '#dfe0e0',
                 animate: 1000,
                 size: $chart.attr('data-size'),
-                lineCap: 'square'
+                lineCap: 'round'
             });
+            setTimeout(function(){
+                console.log("updatee");
+                $chart.data('easyPieChart').update(40);
+            }, 1000);
         },{
             triggerOnce: true,
             offset: 'bottom-in-view'
@@ -738,7 +742,7 @@ jQuery(document).ready(function( $ ) {
         $chart.css('left', '50%');
         $chart.css('margin-left', - $chart.attr('data-size') / 2 );
     });
-
+    */
 
     // Fix for embedded videos
     // ======================

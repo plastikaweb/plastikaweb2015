@@ -31,7 +31,9 @@
     "pace": "~1.0.2",
     "bigtext": "~0.1.6",
     "jquery-ui": "~1.11.2",
-    "angular": "~1.3.0"
+    "angular": "~1.3.0",
+    "angular-sanitize": "~1.3.0"
+
   },
   "resolutions": {
     "jquery": "~2.1.1"
