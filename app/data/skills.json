@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "name": "javascript",
+    "slug": "javascript",
+    "text": "Object Oriented approach, DOM manipulation, Ajax development, JSON format.",
+    "active": true,
+    "order": 1,
+    "color": "#D0CC85"
+  },
+  {
+    "id": 2,
+    "name": "jquery",
+    "slug": "jquery",
+    "text": "DOM manipulation, Ajax calls, Promises, Events, Effects and transitions, styles manipulation.",
+    "active": true,
+    "order": 2,
+    "color": "#B0D3E7"
+  },
+  {
+    "id": 3,
+    "name": "angularJS",
+    "slug": "angularjs",
+    "text": "Single Page Applications with a robust and modular approach. Also a little of <strong>backbone.js</strong> and <strong>ember.js</strong>.",
+    "active": true,
+    "order": 3,
+    "color": "#B24949"
+  },
+  {
+    "id": 4,
+    "name": "HTML5",
+    "slug": "html5",
+    "text": "Semantic web, related APIs (drag and drop, svg, video, audio, canvas).",
+    "active": true,
+    "order": 4,
+    "color": "#DD8573"
+  },
+  {
+    "id": 5,
+    "name": "CSS3",
+    "slug": "css3",
+    "text": "Styles, transforms, transitions and animations, media queries.",
+    "active": true,
+    "order": 5,
+    "color": "#6DA9C9"
+  },
+  {
+    "id": 6,
+    "name": "Sass & Compass",
+    "slug": "sass-compass",
+    "text": "Fast processing to standard CSS. Also a little of <strong>LESS</strong>, <strong>Stylus</strong> and <strong>Susy</strong>.",
+    "active": true,
+    "order": 6,
+    "color": "#C08DA8"
+  },
+  {
+    "id": 7,
+    "name": "Twitter Bootstrap",
+    "slug": "twitter-bootstrap",
+    "text": "Responsive design, mobile first approach, components configuration.",
+    "active": true,
+    "order": 7,
+    "color": "#62699A"
+  },
+  {
+    "id": 8,
+    "name": "Laravel",
+    "slug": "laravel",
+    "text": "MVC PHP framework with migrations, ORM, restful controllers and more. I also worked with <strong>Codeigniter</strong>.",
+    "active": true,
+    "order": 8,
+    "color": "#D2B381"
+  }
+]

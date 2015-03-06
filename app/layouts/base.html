@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" lang="">
+<html ng-app="app" class="no-js" lang="">
     <head>
         <meta charset="utf-8">
         <meta name="description" content="">
@@ -67,6 +67,14 @@
         <script src="../bower_components/bigtext/src/bigtext.js"></script>
         <script src="scripts/theme.js"></script>
         <script src="../bower_components/pace/pace.js"></script>
+
+        <!-- angular.js-->
+        <script src="../../bower_components/angular/angular.min.js"></script>
+        <script src="app.js"></script>
+        <script src="../skills/skills.module.js"></script>
+        <script src="../skills/skillsService.js"></script>
+        <script src="../skills/skills.js"></script>
+
         <!-- endbuild -->
         {% block extrajs %}{% endblock %}
     </body>
