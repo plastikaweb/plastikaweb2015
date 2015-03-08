@@ -23,5 +23,6 @@
     $interpolateProvider.startSymbol('{$');
     $interpolateProvider.endSymbol('$}');
   }
+  changeMarkup.$inject = ['$interpolateProvider'];
 
 })();

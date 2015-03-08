@@ -4,8 +4,6 @@
   angular.module('app.skills')
     .factory('skillsService', skillsService);
 
-  skillsService.$inject = ['$http'];
-
   function skillsService($http) {
 
     var Service = {};
@@ -15,5 +13,6 @@
 
     return Service;
   }
+  skillsService.$inject = ['$http'];
 
 })();

@@ -2,9 +2,7 @@
 'use strict';
 // generated on 2015-01-19 using generator-gulp-webapp 0.2.0
 var gulp = require('gulp');
-var $ = require('gulp-load-plugins')({
-    pattern: ['gulp-*', 'imagemin-*']
-});
+var $ = require('gulp-load-plugins')();
 
 var minimist = require('minimist')(process.argv.slice(2));
 
@@ -22,11 +20,23 @@ switch(config.env) {
   case 'production':
   default:
     config.htmlPath = 'app/*.html';
+    config.jsAngularPath = 'app/ng/**/*.js';
     config.stylesPath = 'app/styles/**/*.scss';
     config.imagesPath = 'app/assets/images/**/*';
-    config.build = ['jshint', 'html', 'images', 'fonts', 'extras', 'minify', 'htmlpretty'];
+    config.build = ['ngAnnotate', 'jshint', 'html', 'images', 'fonts', 'extras', 'minify', 'htmlpretty'];
   break;
 }
+
+
+
+gulp.task('ngAnnotate', function() {
+  return gulp.src(config.jsAngularPath)
+    .pipe($.ngAnnotate({
+      add: true,
+      single_quotes: true
+    }))
+    .pipe(gulp.dest('app/ng/'));
+});
 
 gulp.task('styles', function () {
   return gulp.src(config.stylesPath)
