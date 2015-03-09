@@ -20,22 +20,23 @@ switch(config.env) {
   case 'production':
   default:
     config.htmlPath = 'app/*.html';
-    config.jsAngularPath = 'app/ng/**/*.js';
+    config.jsPath = ['app/ng/**/*.js', 'app/scripts/*.js'];
     config.stylesPath = 'app/styles/**/*.scss';
     config.imagesPath = 'app/assets/images/**/*';
     config.build = ['ngAnnotate', 'jshint', 'html', 'images', 'fonts', 'extras', 'minify', 'htmlpretty'];
   break;
 }
 
-
-
 gulp.task('ngAnnotate', function() {
-  return gulp.src(config.jsAngularPath)
+  return gulp.src(config.jsPath)
     .pipe($.ngAnnotate({
       add: true,
       single_quotes: true
     }))
-    .pipe(gulp.dest('app/ng/'));
+    .pipe($.uglify({
+      mangle:true
+    }))
+    .pipe(gulp.dest('dist'));
 });
 
 gulp.task('styles', function () {
@@ -52,8 +53,8 @@ gulp.task('styles', function () {
 });
 
 gulp.task('jshint', function () {
-  return gulp.src('app/scripts/**/*.js')
-    .pipe($.jshint())
+  return gulp.src(config.jsPath)
+    .pipe($.jshint('.jshintrc'))
     .pipe($.jshint.reporter('jshint-stylish'))
     .pipe($.jshint.reporter('fail'));
 });
@@ -237,12 +238,14 @@ gulp.task('watch', ['connect'], function () {
     '.tmp/*.html',
     '.tmp/styles/**/*.css',
     'app/scripts/**/*.js',
+    'app/ng/*.js',
     'app/images/**/*'
   ]).on('change', $.livereload.changed);
 
   gulp.watch('app/**/*.html', ['views']);
   gulp.watch('app/styles/**/*.scss', ['styles']);
   gulp.watch('bower.json', ['wiredep']);
+  gulp.watch(config.jsPath, ['jshint']);
 });
 
 gulp.task('imagemin', function () {

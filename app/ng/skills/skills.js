@@ -19,7 +19,5 @@
         self.list = data;
       });
   }
-  Skills.$inject = ['skillsService', 'CHART_OPTIONS'];
-
 
 })();

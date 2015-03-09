@@ -16,13 +16,15 @@
     'easypiechart'
   ]);
 
-  angular.module('app.core')
-    .config(changeMarkup);
-
   function changeMarkup($interpolateProvider) {
     $interpolateProvider.startSymbol('{$');
     $interpolateProvider.endSymbol('$}');
   }
+
+  angular.module('app.core')
+    .config(changeMarkup);
+
+
   changeMarkup.$inject = ['$interpolateProvider'];
 
 })();

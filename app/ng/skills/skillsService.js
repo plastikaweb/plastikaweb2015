@@ -8,11 +8,10 @@
 
     var Service = {};
     Service.getSkills = function () {
-      return $http.get("./data/skills.json");
+      return $http.get('./data/skills.json');
     };
 
     return Service;
   }
-  skillsService.$inject = ['$http'];
 
 })();
