@@ -1,119 +1,121 @@
-[
-  {
-    "id": 1,
-    "name": "javascript",
-    "slug": "javascript",
-    "text": "Object Oriented approach, DOM manipulation, Ajax development, JSON format.",
-    "active": true,
-    "order": 1,
-    "options": {
-      "barColor": "#D0CC85",
-      "scaleColor": "#D0CC85"
+{
+  "skills": [
+    {
+      "id": 1,
+      "name": "javascript",
+      "slug": "javascript",
+      "text": "Object Oriented approach, DOM manipulation, Ajax development, JSON format.",
+      "active": true,
+      "order": 1,
+      "options": {
+        "barColor": "#D0CC85",
+        "scaleColor": "#D0CC85"
+      },
+      "percent": "80"
     },
-    "percent": "80"
-  },
-  {
-    "id": 2,
-    "name": "jquery",
-    "slug": "jquery",
-    "text": "DOM manipulation, Ajax calls, Promises, Events, Effects and transitions, styles manipulation.",
-    "active": true,
-    "order": 2,
-    "options": {
-      "barColor": "#B0D3E7",
-      "scaleColor": "#B0D3E7"
+    {
+      "id": 2,
+      "name": "jquery",
+      "slug": "jquery",
+      "text": "DOM manipulation, Ajax calls, Promises, Events, Effects and transitions, styles manipulation.",
+      "active": true,
+      "order": 2,
+      "options": {
+        "barColor": "#B0D3E7",
+        "scaleColor": "#B0D3E7"
+      },
+      "percent": "70"
     },
-    "percent": "70"
-  },
-  {
-    "id": 3,
-    "name": "angularJS",
-    "slug": "angularjs",
-    "text": "Single Page Applications with a robust and modular approach. Also a little of <strong>backbone.js</strong> and <strong>ember.js</strong>.",
-    "active": true,
-    "order": 3,
-    "options": {
-      "barColor": "#B24949",
-      "scaleColor": "#B24949"
+    {
+      "id": 3,
+      "name": "angularJS",
+      "slug": "angularjs",
+      "text": "Single Page Applications with a robust and modular approach. Also a little of <strong>backbone.js</strong> and <strong>ember.js</strong>.",
+      "active": true,
+      "order": 3,
+      "options": {
+        "barColor": "#B24949",
+        "scaleColor": "#B24949"
+      },
+      "percent": "40"
     },
-    "percent": "40"
-  },
-  {
-    "id": 4,
-    "name": "HTML5",
-    "slug": "html5",
-    "text": "Semantic web, related APIs (drag and drop, svg, video, audio, canvas).",
-    "active": true,
-    "order": 7,
-    "options": {
-      "barColor": "#DD8573",
-      "scaleColor": "#DD8573"
+    {
+      "id": 4,
+      "name": "HTML5",
+      "slug": "html5",
+      "text": "Semantic web, related APIs (drag and drop, svg, video, audio, canvas).",
+      "active": true,
+      "order": 4,
+      "options": {
+        "barColor": "#DD8573",
+        "scaleColor": "#DD8573"
+      },
+      "percent": "65"
     },
-    "percent": "65"
-  },
-  {
-    "id": 5,
-    "name": "CSS3",
-    "slug": "css3",
-    "text": "Styles, transforms, transitions and animations, media queries.",
-    "active": true,
-    "order": 5,
-    "options": {
-      "barColor": "#6DA9C9",
-      "scaleColor": "#6DA9C9"
+    {
+      "id": 5,
+      "name": "CSS3",
+      "slug": "css3",
+      "text": "Styles, transforms, transitions and animations, media queries.",
+      "active": true,
+      "order": 5,
+      "options": {
+        "barColor": "#6DA9C9",
+        "scaleColor": "#6DA9C9"
+      },
+      "percent": "70"
     },
-    "percent": "70"
-  },
-  {
-    "id": 6,
-    "name": "Sass & Compass",
-    "slug": "sass",
-    "text": "Fast processing to standard CSS. Also a little of <strong>LESS</strong>, <strong>Stylus</strong> and <strong>Susy</strong>.",
-    "active": true,
-    "order": 6,
-    "options": {
-      "barColor": "#C08DA8",
-      "scaleColor": "#C08DA8"
+    {
+      "id": 6,
+      "name": "Sass & Compass",
+      "slug": "sass",
+      "text": "Fast processing to standard CSS. Also a little of <strong>LESS</strong>, <strong>Stylus</strong> and <strong>Susy</strong>.",
+      "active": true,
+      "order": 6,
+      "options": {
+        "barColor": "#C08DA8",
+        "scaleColor": "#C08DA8"
+      },
+      "percent": "50"
     },
-    "percent": "50"
-  },
-  {
-    "id": 7,
-    "name": "Twitter Bootstrap",
-    "slug": "bootstrap",
-    "text": "Responsive design, mobile first approach, components configuration.",
-    "active": true,
-    "order": 5,
-    "options": {
-      "barColor": "#62699A",
-      "scaleColor": "#62699A"
+    {
+      "id": 7,
+      "name": "Twitter Bootstrap",
+      "slug": "bootstrap",
+      "text": "Responsive design, mobile first approach, components configuration.",
+      "active": true,
+      "order": 5,
+      "options": {
+        "barColor": "#62699A",
+        "scaleColor": "#62699A"
+      },
+      "percent": "80"
     },
-    "percent": "80"
-  },
-  {
-    "id": 8,
-    "name": "Laravel",
-    "slug": "laravel",
-    "text": "MVC PHP framework with migrations, ORM, restful controllers and more. I also worked with <strong>Codeigniter</strong>.",
-    "active": true,
-    "order": 8,
-    "options": {
-      "barColor": "#D2B381",
-      "scaleColor": "#D2B381"
+    {
+      "id": 8,
+      "name": "Laravel",
+      "slug": "laravel",
+      "text": "MVC PHP framework with migrations, ORM, restful controllers and more. I also worked with <strong>Codeigniter</strong>.",
+      "active": true,
+      "order": 8,
+      "options": {
+        "barColor": "#D2B381",
+        "scaleColor": "#D2B381"
+      },
+      "percent": "50"
     },
-    "percent": "50"
-  },
-  {
-    "id": 9,
-    "name": "Facebook API",
-    "slug": "facebook",
-    "text": "Facebook applications, using the PHP API and the javascript SDK.",
-    "active": true,
-    "order": 9,
-    "options": {
-      "barColor": "#526884",
-      "scaleColor": "#526884"
-    },
-    "percent": "70"
-  }
-]
+    {
+      "id": 9,
+      "name": "Facebook API",
+      "slug": "facebook",
+      "text": "Facebook applications, using the PHP API and the javascript SDK.",
+      "active": false,
+      "order": 9,
+      "options": {
+        "barColor": "#526884",
+        "scaleColor": "#526884"
+      },
+      "percent": "70"
+    }
+  ]
+}

@@ -15,6 +15,10 @@
     margin-top: -0.5em;
     margin-left: -0.5em;
   }
+  canvas{
+    width: 100%;
+    height: auto;
+  }
   img{
     font-size: 7em;
   }
@@ -24,7 +28,7 @@
 
 }
 .bottom-chart{
-  min-height: 155px;
+  min-height: 195px;
   > *{
     text-align: center;
   }

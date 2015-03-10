@@ -14,6 +14,8 @@
      * 3rd Party modules
      */
     'easypiechart'
+
+
   ]);
 
   function changeMarkup($interpolateProvider) {

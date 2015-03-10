@@ -3,7 +3,8 @@
 
   angular.module('app', [
     'app.core',
-    'app.skills'
+    'app.skills',
+    'app.projects'
   ]);
 
 })();

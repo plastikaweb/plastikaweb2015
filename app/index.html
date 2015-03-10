@@ -7,7 +7,7 @@
 {% block content %}
 <article>
 
-  <section class="section  text-normal section-text-no-shadow section-inner-no-shadow section-normal section-opaque"
+  <section class="section text-normal section-text-no-shadow section-inner-no-shadow section-normal section-opaque"
            data-label="">
     <div class="background-media"
          style="background-image:url('assets/images/home-bg.jpg');background-repeat:no-repeat;background-size:cover;background-attachment:fixed;background-position:center 0%;"></div>
@@ -46,9 +46,7 @@
   </section>
 
   <section class="section">
-
-
-    <div class="container" ng-controller="Skills as sk">
+    <div class="container">
       <div class="row">
         <div class="col-md-12">
           <h1 class="text-center element-top-70 os-animation big" data-os-animation="fadeIn"
@@ -62,31 +60,94 @@
             </div>
           </div>
 
-          <div class="row">
 
-            <div class="col-sm-4 col-xs-12"
-                 ng-repeat="skill in sk.list | orderBy:'+order' | filter: {active: true}">
-              <div easypiechart
-                   class="chart easyPieChart element-top-20 element-bottom-20 os-animation"
-                   data-os-animation="fadeIn" options="skill.options" percent="skill.percent">
-                <span>{$ skill.percent $}</span>
-                <img ng-src="assets/images/skills/{$ skill.slug $}.png"
-                                                    alt="{$ skill.name $}"/>
+
+          <skills-panel class="row">
+
+          </skills-panel>
+
+
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- some projects -->
+
+  <section class="section">
+
+    <div class="container" ng-controller="Projects as pj">
+      <div class="row">
+        <div class="col-md-12">
+          <h1 class="text-center element-top-70 os-animation big"
+              data-os-animation="fadeIn" data-os-animation-delay="0s">
+            My latest work
+          </h1>
+
+          <div class="divider-border divider-border-center element-top-10 element-bottom-10 os-animation"
+               data-os-animation="fadeIn" data-os-animation-delay="0.1s"
+               style="height:3px;">
+            <div class="divider-border-inner" style="width:60px;">
+            </div>
+          </div>
+
+          <p class="lead text-center center element-bottom-40" data-os-animation="none" data-os-animation-delay="0s">
+            I put all my 10 years of development experience into every project.<br>
+            Take a look at some of my latest work.</p>
+
+          <div class="portfolio-container element-bottom-60">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="portfolio-header clearfix">
+                  <div class="portfolio-filters pull-right">
+                  </div>
+                </div>
               </div>
-              <div class="bottom-chart">
-                <h2>{$ skill.name $}</h2>
+            </div>
 
-                <p ng-bind-html="skill.text"></p>
+            <div class="portfolio masonry magnific-all isotope">
+              <div
+                class="masonry-item portfolio-item"
+                isotope-item
+                ng-repeat="project in pj.list  | orderBy:'-order' | limitTo:6 | filter: {active: true}"
+                data-title="{$ project.name $}">
+                <div
+                  class="figure portfolio-os-animation image-filter-blur image-filter-onhover fade-in from-right text-center figcaption-middle normalwidth"
+                  data-os-animation="bounceInDown"
+                  data-os-animation-delay="0.7s">
+
+                  <a class="figure-image magnific"
+                     href="assets/images/projects/{$ project.slug $}/{$ project.slug $}-1.jpg"
+                     target="_self">
+                    <img alt="{$ project.name $}" class="normalwidth"
+                         ng-src="assets/images/projects/{$ project.slug $}/{$ project.slug $}-1.jpg">
+
+                    <div class="figure-overlay">
+                      <div class="figure-overlay-container">
+                        <div class="figure-caption">
+                          <h3 class=
+                                "figure-caption-title bordered bordered-small">
+                            {$ project.name $}</h3>
+
+                          <p class=
+                               "figure-caption-description">
+                            {$ project.participation $}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
               </div>
-
             </div>
           </div>
         </div>
       </div>
     </div>
-
-
+    </div>
   </section>
+
 
   <section class="section">
     <div class="container">

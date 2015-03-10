@@ -11,7 +11,7 @@
 
     skillsService.getSkills()
       .success(function (data) {
-
+        data = data.skills;
         for (var i in data) {
           data[i].options = angular.extend(data[i].options, CHART_OPTIONS);
         }
