@@ -60,13 +60,8 @@
             </div>
           </div>
 
-
-
           <skills-panel class="row">
-
           </skills-panel>
-
-
 
         </div>
       </div>
@@ -106,41 +101,11 @@
               </div>
             </div>
 
-            <div class="portfolio masonry magnific-all isotope">
-              <div
-                class="masonry-item portfolio-item"
-                isotope-item
-                ng-repeat="project in pj.list  | orderBy:'-order' | limitTo:6 | filter: {active: true}"
-                data-title="{$ project.name $}">
-                <div
-                  class="figure portfolio-os-animation image-filter-blur image-filter-onhover fade-in from-right text-center figcaption-middle normalwidth"
-                  data-os-animation="bounceInDown"
-                  data-os-animation-delay="0.7s">
+            <projects-panel class="row"
+                            id="isotopeContainer"
+                            isotope-container="isotope-container" ng-cloak>
+            </projects-panel>
 
-                  <a class="figure-image magnific"
-                     href="assets/images/projects/{$ project.slug $}/{$ project.slug $}-1.jpg"
-                     target="_self">
-                    <img alt="{$ project.name $}" class="normalwidth"
-                         ng-src="assets/images/projects/{$ project.slug $}/{$ project.slug $}-1.jpg">
-
-                    <div class="figure-overlay">
-                      <div class="figure-overlay-container">
-                        <div class="figure-caption">
-                          <h3 class=
-                                "figure-caption-title bordered bordered-small">
-                            {$ project.name $}</h3>
-
-                          <p class=
-                               "figure-caption-description">
-                            {$ project.participation $}
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </a>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </div>

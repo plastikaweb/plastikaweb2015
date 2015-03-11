@@ -1,0 +1,35 @@
+<div isotope-item="isotope-item"
+     ng-repeat="
+     project in pj.list  |
+     orderBy:'-order' |
+     limitTo:6  track by $index |
+     filter: {active: true}
+     ">
+  <div
+    class="figure portfolio-os-animation image-filter-blur image-filter-onhover fade-in from-right text-center figcaption-middle normalwidth"
+    data-os-animation="bounceInDown"
+    data-os-animation-delay="0.7s">
+
+    <a class="figure-image magnific"
+       href="assets/images/projects/{{ project.slug }}/{{ project.slug }}-1.jpg"
+       target="_self">
+      <img alt="{{ project.name }}" class="normalwidth"
+           ng-src="assets/images/projects/{{ project.slug }}/{{ project.slug }}-1.jpg">
+
+      <div class="figure-overlay">
+        <div class="figure-overlay-container">
+          <div class="figure-caption">
+            <h3 class=
+                  "figure-caption-title bordered bordered-small">
+              {{ project.name }}</h3>
+
+            <p class=
+                 "figure-caption-description">
+              {{ project.participation }}
+            </p>
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+</div>

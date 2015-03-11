@@ -13,8 +13,8 @@
     /*
      * 3rd Party modules
      */
-    'easypiechart'
-
+    'easypiechart',
+    'iso.config'
 
   ]);
 

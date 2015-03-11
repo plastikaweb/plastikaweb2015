@@ -8,7 +8,7 @@
   function skillsPanel() {
     return {
       restrict: 'E',
-      templateUrl: 'partials/home/skills-panel.html',
+      templateUrl: 'ng/skills/skills-panel.html',
       controller: 'Skills',
       controllerAs: 'sk'
     };

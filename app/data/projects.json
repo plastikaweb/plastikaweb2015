@@ -40,6 +40,88 @@
         "url": "http://www.ankeluckmann.es",
         "client": "Gominola Creative Media"
       }
+    },
+    {
+      "id": 4,
+      "name": "Ige Bcn 2",
+      "slug": "ige-bcn",
+      "participation": "Actionscript 2.0 full screen site, with advanced animation and reflects. The contents in three languages are loaded via XML",
+      "active": true,
+      "order": 4,
+      "data": {
+        "date": "2007",
+        "url": "http://www.igebcn.cat",
+        "client": "<a href='http://www.biloqui.com/es/proyecto/igebcn-web' target='_blank'>biloqui</a>",
+        "graphic design": "biloqui"
+      }
+    },
+    {
+      "id": 5,
+      "name": "Gaton Grup de Construcció 2",
+      "slug": "gaton",
+      "participation": "Actionscript 3.0 full screen site, with advanced animation. The contents in two languages are loaded via XML",
+      "active": true,
+      "order": 5,
+      "data": {
+        "date": "2008",
+        "url": "http://www.gaton.es",
+        "client": "<a href='http://www.biloqui.com/es/proyecto/gaton-web' target='_blank'>biloqui</a>",
+        "graphic design": "biloqui"
+      }
+    },
+    {
+      "id": 6,
+      "name": "Anke Luckmann 2",
+      "slug": "anke-luckmann",
+      "participation": "Actionscript 3.0 full screen site, with advanced animation. The contents are managed via PHP/MySQL with a graphical web CMS ('Plitakas').",
+      "active": true,
+      "order": 6,
+      "data": {
+        "date": "2010",
+        "url": "http://www.ankeluckmann.es",
+        "client": "Gominola Creative Media"
+      }
+    },
+    {
+      "id": 7,
+      "name": "Ige Bcn 3",
+      "slug": "ige-bcn",
+      "participation": "Actionscript 2.0 full screen site, with advanced animation and reflects. The contents in three languages are loaded via XML",
+      "active": true,
+      "order": 7,
+      "data": {
+        "date": "2007",
+        "url": "http://www.igebcn.cat",
+        "client": "<a href='http://www.biloqui.com/es/proyecto/igebcn-web' target='_blank'>biloqui</a>",
+        "graphic design": "biloqui"
+      }
+    },
+    {
+      "id": 8,
+      "name": "Gaton Grup de Construcció 3",
+      "slug": "gaton",
+      "participation": "Actionscript 3.0 full screen site, with advanced animation. The contents in two languages are loaded via XML",
+      "active": true,
+      "order": 8,
+      "data": {
+        "date": "2008",
+        "url": "http://www.gaton.es",
+        "client": "<a href='http://www.biloqui.com/es/proyecto/gaton-web' target='_blank'>biloqui</a>",
+        "graphic design": "biloqui"
+      }
+    },
+    {
+      "id": 9,
+      "name": "Anke Luckmann 3",
+      "slug": "anke-luckmann",
+      "participation": "Actionscript 3.0 full screen site, with advanced animation. The contents are managed via PHP/MySQL with a graphical web CMS ('Plitakas').",
+      "active": true,
+      "order": 9,
+      "data": {
+        "date": "2010",
+        "url": "http://www.ankeluckmann.es",
+        "client": "Gominola Creative Media"
+      }
     }
   ]
 }
