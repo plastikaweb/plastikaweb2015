@@ -7,7 +7,7 @@
     trackColor: '#f2f2f2',
     scaleLength: 15,
     lineCap: 'round',
-    size: 220,
+    size: 180,
     rotate: 0,
     lineWidth: 10,
     animate: {
@@ -16,7 +16,6 @@
     },
     easing: 'easeInOutSquare'
   })
-    .constant('FIREBASE_URL',
-    'https://blazing-torch-2654.firebaseio.com/');
+    .constant('FIREBASE_URL', 'https://blazing-torch-2654.firebaseio.com/');
 
 })();
