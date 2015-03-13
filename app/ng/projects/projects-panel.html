@@ -1,10 +1,8 @@
-<div isotope-item="isotope-item"
-     ng-repeat="
-     project in pj.list  |
-     orderBy:'-order' |
-     limitTo:6  track by $index |
-     filter: {active: true}
-     ">
+<div
+  class="masonry-item portfolio-item filter-people"
+  isotope-item="isotope-item"
+  ng-repeat="project in pj.list | orderBy:'-order' | limitTo:6  track by $index | filter: {active: true}"
+  data-title="{{ project.name }}">
   <div
     class="figure portfolio-os-animation image-filter-blur image-filter-onhover fade-in from-right text-center figcaption-middle normalwidth"
     data-os-animation="bounceInDown"
@@ -22,11 +20,6 @@
             <h3 class=
                   "figure-caption-title bordered bordered-small">
               {{ project.name }}</h3>
-
-            <p class=
-                 "figure-caption-description">
-              {{ project.participation }}
-            </p>
           </div>
         </div>
       </div>

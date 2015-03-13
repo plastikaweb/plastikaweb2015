@@ -7,7 +7,7 @@
 
   function projectsPanel() {
     return {
-      restrict: 'E',
+
       templateUrl: 'ng/projects/projects-panel.html',
       controller: 'Projects',
       controllerAs: 'pj'
