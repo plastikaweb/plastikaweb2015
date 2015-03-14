@@ -64,37 +64,27 @@
         <div class="nav-container">
             <nav class="collapse navbar-collapse main-navbar logo-navbar navbar-right">
                 <div class="menu-container">
+
                     <ul class="nav navbar-nav" id="menu-main">
-                        {% for item in [{title:"Home", href:"index.html"},
-                                        {title:"Portfolio", href:"corporate-portfolio-fullwidth.html"},
-                                        {title:"Contact", href:"corporate-contact.html"}] %}
-                        <li class="menu-item {{ 'active' if activeMenu == item.title }} {{ 'dropdown' if item.href == '#'}} {{ 'menu-item-object-oxy_mega_menu' if 'megamenu' == item.type }}">
-                            <a {{ 'class="dropdown-toggle" data-toggle="dropdown"' if item.href == '#' }} href="/{{ item.href }}">{{ item.title }}</a>
-                            {% if item.children %}
-                            <ul class="dropdown-menu dropdown-menu-left {{ 'row' if 'megamenu' == item.type }}">
-                            {% for child in item.children %}
-                                {% if item.type != 'megamenu' %}
-                                <li class="menu-item">
-                                    <a href="/{{ child.href }}">{{ child.title }}</a>
-                                </li>
-                                {% else %}
-                                <li class="menu-item menu-item-object-oxy_mega_columns menu-item-has-children dropdown-submenu dropdown {{ child.size }}">
-                                    <strong>{{child.title}}</strong>
-                                    <ul class="dropdown-menu-left">
-                                    {% for megamenu in child.children %}
-                                         <li class="menu-item">
-                                            <a href="/{{ megamenu.href }}">{{ megamenu.title }}</a>
-                                        </li>
-                                    {% endfor %}
-                                    </ul>
-                                </li>
-                                {% endif %}
-                            {% endfor %}
-                            </ul>
-                            {% endif %}
+
+                        <li class="menu-item active">
+                            <a href="#/home">Home</a>
+
                         </li>
-                        {% endfor %}
+
+                        <li class="menu-item">
+                            <a href="#/projects">Projects</a>
+
+                        </li>
+
+                        <li class="menu-item">
+                            <a href="#/contact">Contact</a>
+
+                        </li>
+
                     </ul>
+
+
                 </div>
 
                 <!--<div class="menu-sidebar">

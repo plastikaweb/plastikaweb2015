@@ -1,8 +1,8 @@
 <div class="col-md-3 col-sm-6 col-xs-12"
      ng-repeat="skill in sk.list | orderBy:'+order' | filter: {active: true}">
   <div easypiechart
-       class="chart easyPieChart element-top-20 element-bottom-20 os-animation"
-       data-os-animation="fadeIn" options="skill.options" percent="skill.percent">
+       class="chart easyPieChart element-top-20 element-bottom-20"
+       options="skill.options" percent="skill.percent">
     <span>{{ skill.percent }}</span>
     <img ng-src="assets/images/skills/{{ skill.slug }}.png"
          alt="{{ skill.name }}"/>

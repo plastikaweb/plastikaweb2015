@@ -227,11 +227,9 @@ jQuery(document).ready(function( $ ) {
                     }, function(){
                         // refresh waypoints after layout
                         Waypoint.refreshAll();
-                        $container.removeClass( 'no-transition' );
-                        onScrollInit( $items.find( '.portfolio-os-animation' ), $container );
-                        onScrollInit( $items.find( '.blog-os-animation' ), $container );
+
                     });
-                },200);
+                },400);
             });
         });
     }
@@ -244,35 +242,8 @@ jQuery(document).ready(function( $ ) {
     // Init the isotope
     setTimeout( function() {
         isotopeInit();
-    }, 350);
+    }, 400);
 
-
-
-    // Portfolio Filters
-    // ======================
-
-    $('.portfolio-filter').click( function() {
-        var $button = $(this);
-        var filter = $button.attr( 'data-filter' );
-        var $filtersRow = $button.parents('div.row');
-        $filtersRow.find( '.portfolio-title span' ).text( $button.text() );
-        var $portfolio = $filtersRow.next();
-        $portfolio.isotope( { filter: filter } );
-    });
-
-    $('.portfolio-order').click( function() {
-        var $button = $(this);
-        var order = $button.attr( 'data-value' );
-        var $portfolio = $button.parents( 'div.row' ).next();
-        $portfolio.isotope( { sortAscending: order === 'true' } );
-    });
-
-    $('.portfolio-sort').click( function() {
-        var $button = $(this);
-        var sort = $button.attr( 'data-sort' );
-        var $portfolio = $button.parents('div.row').next();
-        $portfolio.isotope( { sortBy: sort } );
-    });
 
     // Theme Sections
     // ======================
@@ -409,127 +380,6 @@ jQuery(document).ready(function( $ ) {
     $('select').not('.country_to_state, #billing_state, #shipping_state, #calc_shipping_state').wrap('<div class="select-wrap">');
 
 
-    // Bullet navigation
-    // ======================
-    var menu = $('#masthead');
-    var menuInitOffset = $('#masthead').position();
-    menuInitOffset = menuInitOffset === undefined ? 0 : menuInitOffset.top;
-
-    var menuItems = $('.menu').find('a');
-    var scrollMenuItems = menuItems.map(function(){
-        var item = this.hash;
-        if (item && $(item).length ) {
-            return item;
-        }
-    });
-
-    var bulletNav = $('article .bullet-nav');
-    if( bulletNav.length || scrollMenuItems.length ) {
-        var sections = [];
-        $('article').find('section').each( function() {
-            // if section has an id
-            if( this.id ) {
-                sections.push(this);
-            }
-        });
-        if( sections.length ) {
-            if( scrollMenuItems.length ) {
-                menuItems.parent().removeClass('active current-menu-item');
-            }
-            $.each( sections, function( index, section) {
-                var $section = $(section);
-                // create bullet nav
-                if( bulletNav.length ){
-                    var list = bulletNav.find('ul');
-                    var tooltipAtts = '';
-                    if( 'on' === bulletNav.attr( 'data-show-tooltips' ) ) {
-                         tooltipAtts = 'data-toggle="tooltip" data-placement="left" title="' + $section.attr('data-label') + '"';
-                    }
-                    list.append('<li><a href="#' + section.id + '" ' + tooltipAtts + '>' + section.id + '</a>');
-                }
-                // set all section up waypoints
-                $section.waypoint({
-                    offset: function() {
-                        return sectionWaypointOffset( $section, 'up', menu );
-                    },
-                    handler: function(direction) {
-                        if( 'up' === direction ) {
-                            sectionWaypointHandler( scrollMenuItems, menuItems, bulletNav, section );
-                        }
-                    }
-                });
-                // set all section down waypoints
-                $section.waypoint({
-                    offset: function() {
-                        return sectionWaypointOffset( $section, 'down', menu );
-                    },
-                    handler: function(direction) {
-                        if( 'down' === direction ) {
-                            sectionWaypointHandler( scrollMenuItems, menuItems, bulletNav, section );
-                        }
-                    }
-                });
-            });
-            // show the bullets if we have any
-            if( bulletNav.length ){
-                bulletNav.show();
-                bulletNav.css('top', ( $(window).height() - bulletNav.height() )/ 2 );
-            }
-        }
-    }
-
-    function sectionWaypointOffset( $section, direction, menu ) {
-        // if we are going up start from -1 to make sure event triggers
-        var offset = direction === 'up' ? -($section.height() / 2) : 0;
-        var menuHeight = parseInt(oxyThemeData.navbarHeight);
-        if( menu.length && menu.hasClass('navbar-sticky') && menu.hasClass('navbar-scrolled') ){
-            menuHeight = parseInt(oxyThemeData.navbarScrolled);
-        }
-        var sectionOffset = $section.offset().top;
-        var menuOffset = menu.length? menu.position().top : 0;
-        if( menu.length && menu.hasClass('navbar-sticky') && (  (menuOffset + menuHeight)  <= sectionOffset ) && !isMobile ){
-            offset += menuHeight;
-        }
-        return offset;
-    }
-
-    function sectionWaypointHandler( scrollMenuItems, menuItems, bulletNav, section ) {
-        if( scrollMenuItems.length ) {
-            menuItems.parent().removeClass('active current-menu-item').end().filter('[href$="' + section.id + '"]').parent().addClass('active current-menu-item');
-        }
-        if( bulletNav.length ) {
-            bulletNav.find('a').removeClass('active').filter('[href$="' + section.id + '"]').addClass('active');
-        }
-    }
-
-    // Scroll To Section
-    // ======================
-
-    $('.menu a, a.scroll-to-id, .bullet-nav a').on('click', function(e) {
-        var target = this.hash;
-        var offset = 0;
-
-        if(target && $(target).length){
-            e.preventDefault();
-
-            var targetOffset = $(target).offset().top;
-            var menuHeight = parseInt(oxyThemeData.navbarHeight);
-
-            if(menu !== undefined && menu.hasClass('navbar-sticky') && ( menuInitOffset + menuHeight <= targetOffset) && !isMobile){
-                var scrollPoint = parseInt( oxyThemeData.navbarScrolledPoint );
-                var navHeightBeforeScrollPoint = parseInt( oxyThemeData.navbarHeight );
-                var navHeightAfterScrollPoint = parseInt( oxyThemeData.navbarScrolled );
-
-                offset = scrollPoint <= targetOffset ? navHeightAfterScrollPoint : navHeightBeforeScrollPoint;
-            }
-
-            $.scrollTo( $(target), 800, {
-                axis: 'y',
-                offset: -offset + 1
-            } );
-        }
-    });
-
     // Calendar Widget
     // ======================
 
@@ -622,48 +472,6 @@ jQuery(document).ready(function( $ ) {
         }
     });
 
-    // Init On scroll animations
-    function onScrollInit( items, trigger ) {
-        items.each( function() {
-            var osElement = $(this),
-                osAnimationClass = osElement.attr('data-os-animation'),
-                osAnimationDelay = osElement.attr('data-os-animation-delay');
-
-            osElement.css({
-                '-webkit-animation-delay':  osAnimationDelay,
-                '-moz-animation-delay':     osAnimationDelay,
-                'animation-delay':          osAnimationDelay
-            });
-
-            var osTrigger = ( trigger ) ? trigger : osElement;
-
-            osTrigger.waypoint(function() {
-                osElement.addClass('animated').addClass(osAnimationClass);
-            },{
-                triggerOnce: true,
-                offset: '90%'
-            });
-        });
-    }
-
-    function initialisePageScrollAnimations() {
-        onScrollInit( $('.os-animation') );
-        onScrollInit( $( '.staff-os-animation' ), $('.staff-list-container') );
-        onScrollInit( $( '.recent-simple-os-animation' ), $('.recent-simple-os-container') );
-    }
-
-
-    // if we have page loader on wait for it to finish before init animations
-    if(oxyThemeData.siteLoader === 'on') {
-        Pace.on('done', function() {
-            setTimeout(function() {
-                initialisePageScrollAnimations();
-            }, 500);
-        });
-    }
-    else {
-        initialisePageScrollAnimations();
-    }
 
     // Goto top button
     // ======================

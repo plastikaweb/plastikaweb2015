@@ -4,9 +4,7 @@
   ng-repeat="project in pj.list | orderBy:'-order' | limitTo:6  track by $index | filter: {active: true}"
   data-title="{{ project.name }}">
   <div
-    class="figure portfolio-os-animation image-filter-blur image-filter-onhover fade-in from-right text-center figcaption-middle normalwidth"
-    data-os-animation="bounceInDown"
-    data-os-animation-delay="0.7s">
+    class="figure image-filter-blur image-filter-onhover fade-in from-right text-center figcaption-middle normalwidth">
 
     <a class="figure-image magnific"
        href="assets/images/projects/{{ project.slug }}/{{ project.slug }}-1.jpg"
