@@ -14,6 +14,7 @@
         data = data.projects;
 
         self.list = data;
+        projectsService.isotopeInit();
       });
   }
 
