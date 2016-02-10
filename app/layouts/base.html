@@ -90,24 +90,36 @@
         <script src="../bower_components/angularfire/dist/angularfire.js"></script>
         <!-- endbuild -->
 
-        <!-- build:js assets/js/ng.min.js -->
+        <!-- build:js assets/js/ng/app.js -->
         <!-- angular ini app -->
-        <script src="ng/app.js"></script>
+        <script src="../ng/app.js"></script>
+        <!-- endbuild -->
+
+        <!-- build:js assets/js/ng/core/core.js -->
         <!-- angular core app -->
-        <script src="ng/core/core.module.js"></script>
-        <script src="ng/core/config.js"></script>
-        <script src="ng/core/constants.js"></script>
-        <!-- angular skills -->
-        <script src="ng/skills/skills.module.js"></script>
-        <script src="ng/skills/skillsService.js"></script>
-        <script src="ng/skills/skills.js"></script>
-        <script src="ng/skills/skills.directive.js"></script>
+        <script src="../ng/core/core.module.js"></script>
+        <script src="../ng/core/config.js"></script>
+        <script src="../ng/core/constants.js"></script>
+        <!-- endbuild -->
+
+        <!-- build:js assets/js/ng/skills/skills.js -->
+        <script src="../ng/skills/skills.module.js"></script>
+        <script src="../ng/skills/skillsService.js"></script>
+        <script src="../ng/skills/skills.js"></script>
+        <script src="../ng/skills/skills.directive.js"></script>
+        <!-- endbuild -->
+
+        <!-- build:js assets/js/ng/projects/project.js -->
         <!-- angular project last -->
         <script src="../ng/projects/projects.module.js"></script>
         <script src="../ng/projects/projectsService.js"></script>
         <script src="../ng/projects/projects.js"></script>
+        <!-- endbuild -->
+
+        <!-- build:js assets/js/ng/directive/directives.js -->
         <script src="../ng/projects/projects.directive.js"></script>
         <!-- endbuild -->
+
         {% block extrajs %}{% endblock %}
     </body>
 </html>

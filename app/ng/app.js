@@ -9,13 +9,10 @@
     config(function($routeProvider){
       $routeProvider.
         when('/home', {
-          templateUrl: 'ng/home/home.html'
+          templateUrl: 'templates/home.html'
         }).
         when('/projects', {
-          templateUrl: 'ng/projects/project.html'
-        }).
-        when('/contact', {
-          templateUrl: 'ng/contact/contact.html'
+          templateUrl: 'templates/project.html'
         }).
         otherwise({
           redirectTo: '/home'

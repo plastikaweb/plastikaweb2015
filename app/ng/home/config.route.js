@@ -14,7 +14,7 @@
       {
         url: '/home',
         config: {
-          templateUrl: 'ng/home/home.html',
+          templateUrl: '../directives/home.html',
           title: 'Home',
           settings: {
             nav: 1,

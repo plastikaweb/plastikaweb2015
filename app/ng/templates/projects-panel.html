@@ -1,7 +1,7 @@
 <div
   class="masonry-item portfolio-item filter-people"
   isotope-item="isotope-item"
-  ng-repeat="project in pj.list | orderBy:'-order' | limitTo:6  track by $index | filter: {active: true}"
+  ng-repeat="project in pj.list | orderBy:'-order' | limitTo:6 track by $index"
   data-title="{{ project.name }}">
   <div
     class="figure image-filter-blur image-filter-onhover fade-in from-right text-center figcaption-middle normalwidth">
