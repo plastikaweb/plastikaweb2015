@@ -1,27 +1,27 @@
-(function() {
-  'use strict';
+(function () {
+    'use strict';
 
-  angular
-    .module('app.home')
-    .run(appRun);
+    angular
+      .module('app.home')
+      .run(appRun);
 
-  function appRun(routehelper) {
-    routehelper.configureRoutes(getRoutes());
-  }
+    function appRun(routehelper) {
+        routehelper.configureRoutes(getRoutes());
+    }
 
-  function getRoutes() {
-    return [
-      {
-        url: '/home',
-        config: {
-          templateUrl: '../directives/home.html',
-          title: 'Home',
-          settings: {
-            nav: 1,
-            content: '<i class="fa fa-dashboard"></i> Home'
-          }
-        }
-      }
-    ];
-  }
+    function getRoutes() {
+        return [
+            {
+                url: '/home',
+                config: {
+                    templateUrl: '../templates/home.html',
+                    title: 'Home',
+                    settings: {
+                        nav: 1,
+                        content: '<i class="fa fa-dashboard"></i> Home'
+                    }
+                }
+            }
+        ];
+    }
 })();

@@ -1,5 +1,5 @@
 <div class="col-md-3 col-sm-6 col-xs-12"
-     ng-repeat="skill in sk.list | orderBy:'+order' | filter: {active: true}">
+     ng-repeat="skill in sk.list | orderBy:'+order'">
   <div easypiechart
        class="chart easyPieChart element-top-20 element-bottom-20"
        options="skill.options" percent="skill.percent">

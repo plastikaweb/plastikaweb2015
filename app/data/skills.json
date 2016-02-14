@@ -96,7 +96,7 @@
       "name": "Laravel",
       "slug": "laravel",
       "text": "MVC PHP framework with migrations, ORM, restful controllers and more. I also worked with <strong>Codeigniter</strong>.",
-      "active": true,
+      "active": false,
       "order": 8,
       "options": {
         "barColor": "#D2B381",
@@ -109,7 +109,7 @@
       "name": "Facebook API",
       "slug": "facebook",
       "text": "Facebook applications, using the PHP API and the javascript SDK.",
-      "active": false,
+      "active": true,
       "order": 9,
       "options": {
         "barColor": "#526884",

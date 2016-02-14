@@ -1,21 +1,25 @@
-(function(){
-  'use strict';
+(function () {
+    'use strict';
 
-  angular.module('app', [
-    'app.core',
-    'app.skills',
-    'app.projects'
-  ]).
-    config(function($routeProvider){
-      $routeProvider.
-        when('/home', {
-          templateUrl: 'templates/home.html'
-        }).
-        when('/projects', {
-          templateUrl: 'templates/project.html'
-        }).
-        otherwise({
-          redirectTo: '/home'
-        });
-    });
+    angular.module('app', [
+        'app.core',
+        'app.skills',
+        'app.projects',
+        'app.utilities'
+    ]).
+      config(function ($routeProvider) {
+          $routeProvider.
+            when('/home', {
+                templateUrl: 'ng/templates/home.html'
+            }).
+            when('/skills', {
+                templateUrl: 'ng/templates/skills.html'
+            }).
+            when('/projects', {
+                templateUrl: 'ng/templates/project.html'
+            }).
+            otherwise({
+                redirectTo: '/home'
+            });
+      });
 })();

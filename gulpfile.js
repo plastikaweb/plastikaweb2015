@@ -12,7 +12,7 @@ var gulp = require('gulp'),
       stylesPath: 'app/styles/**/*.scss',
       scriptsPath: 'app/scripts/**/*.js',
       imagesPath: 'app/assets/images/**/*',
-      ngPath: 'app/ng/**/*',
+      ngPathJs: 'app/ng/**/*.js',
       jsonPath: 'app/data/**/*',
       build: ['jshint', 'html', 'images', 'json', 'angular', 'fonts', 'extras', 'minify', 'htmlpretty']
   };
@@ -22,7 +22,7 @@ gulp.task('styles', function () {
     return gulp.src(config.stylesPath)
       .pipe($.plumber())
       .pipe($.rubySass({
-          style: 'compact',
+          style: 'compressed',
           precision: 10,
           loadPath: 'bower_components',
           compass: true
@@ -33,7 +33,7 @@ gulp.task('styles', function () {
 
 // JSHINT
 gulp.task('jshint', function () {
-    return gulp.src([config.scriptsPath, config.ngPath])
+    return gulp.src([config.scriptsPath, config.ngPathJs])
       .pipe($.jshint('.jshintrc'))
       .pipe($.jshint.reporter('jshint-stylish'));
 });
@@ -41,7 +41,6 @@ gulp.task('jshint', function () {
 //NUNJUCKS
 gulp.task('views', function () {
     $.nunjucksRender.nunjucks.configure(['app/']);
-
     return gulp.src(config.htmlPath)
       .pipe($.nunjucksRender())
       .pipe(gulp.dest(config.tempPath));
@@ -56,8 +55,8 @@ gulp.task('html', ['views', 'styles'], function () {
       .pipe(gulp.dest('dist'));
 });
 
-gulp.task('htmlpretty', ['html'], function () {
-    return gulp.src(['dist/*.html'])
+gulp.task('htmlpretty', ['html', 'angular'], function () {
+    return gulp.src(['dist/**/*.html'])
       .pipe($.prettify({
           indent_size: 4,
           indent_inner_html: false
@@ -73,26 +72,35 @@ gulp.task('minify', ['html'], function () {
       .pipe($.replace, 'bower_components/bootstrap-sass-official/assets/fonts/bootstrap', 'fonts');
 
     // rename js to umnunified version
-    gulp.src('dist/assets/**/*.js')
+    gulp.src(['dist/js/*.js', 'dist/ng/*.js'])
       .pipe($.rename(function (path) {
           path.basename = path.basename.replace(/\.min/g, '');
           return path;
       }))
-      .pipe(gulp.dest('dist/assets'));
+      .pipe(gulp.dest(function(file) {
+          return file.base;
+      }));
 
     // now minify JS
-    gulp.src('dist/assets/**/*.js')
+    gulp.src(['dist/js/*.js', 'dist/ng/*.js'])
+      .pipe($.ngAnnotate({
+          // true helps add where @ngInject is not used. It infers.
+          // Doesn't work with resolve, so we must be explicit there
+          add: true
+      }))
       .pipe($.uglify())
-      .pipe(gulp.dest('dist/assets'));
+      .pipe(gulp.dest(function(file) {
+          return file.base;
+      }));
 
     // copy unminified CSS and maps
     gulp.src(['.tmp/styles/*.css', '.tmp/styles/skins/*.css'])
-      .pipe(gulp.dest('dist/assets/css'));
+      .pipe(gulp.dest('dist/css'));
 
     // now minify CSS
-    gulp.src('dist/assets/css/*.css')
+    gulp.src('dist/css/*.css')
       .pipe(cssChannel())
-      .pipe(gulp.dest('dist/assets/css'));
+      .pipe(gulp.dest('dist/css'));
 });
 
 gulp.task('images', function () {
@@ -111,14 +119,14 @@ gulp.task('json', function() {
 
 gulp.task('angular', function() {
    return gulp.src('app/ng/templates/*.*')
-     .pipe(gulp.dest('dist/assets/ng/templates'));
+     .pipe(gulp.dest('dist/ng/templates'));
 });
 
 gulp.task('fonts', function () {
     return gulp.src(require('main-bower-files')().concat('app/fonts/**/*'))
       .pipe($.filter('**/*.{eot,svg,ttf,woff,woff2,otf}'))
       .pipe($.flatten())
-      .pipe(gulp.dest('dist/assets/fonts'));
+      .pipe(gulp.dest('dist/fonts'));
 });
 
 gulp.task('extras', function () {
@@ -160,7 +168,7 @@ gulp.task('favicons', function () {
       }))
       .pipe(gulp.dest('app/layouts'));
 });
-
+//Clean tp and dist
 gulp.task('clean', require('del').bind(null, ['.tmp', 'dist']));
 
 gulp.task('connect', ['views', 'styles'], function () {
@@ -211,6 +219,7 @@ gulp.task('watch', ['connect'], function () {
         '.tmp/*.html',
         '.tmp/styles/**/*.css',
         'app/scripts/**/*.js',
+        'app/ng/**/*',
         'app/images/**/*'
     ]).on('change', $.livereload.changed);
 

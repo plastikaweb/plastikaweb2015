@@ -8,7 +8,7 @@
   function projectsPanel() {
     return {
 
-      templateUrl: '../templates/projects-panel.html',
+      templateUrl: 'ng/templates/projects-panel.html',
       controller: 'Projects',
       controllerAs: 'pj'
     };

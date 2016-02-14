@@ -1,21 +1,21 @@
 (function () {
-  'use strict';
+    'use strict';
 
-  angular
-    .module('app.projects')
-    .controller('Projects', Projects);
+    angular
+      .module('app.projects')
+      .controller('Projects', Projects);
 
-  function Projects(projectsService) {
+    function Projects(projectsService) {
 
-    var self = this;
+        var self = this;
 
-    projectsService.getProjects()
-      .success(function (data) {
-        data = data.projects;
+        projectsService.getProjects()
+          .success(function (data) {
+              data = data.projects;
 
-        self.list = data;
-        projectsService.isotopeInit();
-      });
-  }
+              self.list = data;
+              projectsService.isotopeInit();
+          });
+    }
 
 })();
