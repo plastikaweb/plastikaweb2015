@@ -11,7 +11,7 @@
         "barColor": "#D0CC85",
         "scaleColor": "#D0CC85"
       },
-      "percent": "80"
+      "percent": "85"
     },
     {
       "id": 2,
@@ -24,7 +24,7 @@
         "barColor": "#B0D3E7",
         "scaleColor": "#B0D3E7"
       },
-      "percent": "70"
+      "percent": "80"
     },
     {
       "id": 3,
@@ -37,7 +37,7 @@
         "barColor": "#B24949",
         "scaleColor": "#B24949"
       },
-      "percent": "40"
+      "percent": "65"
     },
     {
       "id": 4,
@@ -50,7 +50,7 @@
         "barColor": "#DD8573",
         "scaleColor": "#DD8573"
       },
-      "percent": "65"
+      "percent": "75"
     },
     {
       "id": 5,
@@ -63,7 +63,7 @@
         "barColor": "#6DA9C9",
         "scaleColor": "#6DA9C9"
       },
-      "percent": "70"
+      "percent": "80"
     },
     {
       "id": 6,
@@ -76,7 +76,7 @@
         "barColor": "#C08DA8",
         "scaleColor": "#C08DA8"
       },
-      "percent": "50"
+      "percent": "60"
     },
     {
       "id": 7,
@@ -115,7 +115,7 @@
         "barColor": "#526884",
         "scaleColor": "#526884"
       },
-      "percent": "70"
+      "percent": "65"
     }
   ]
 }

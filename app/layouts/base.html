@@ -97,24 +97,22 @@
         <!-- angular core app -->
         <script src="ng/core/core.module.js"></script>
         <script src="ng/core/config.js"></script>
-        <script src="ng/core/constants.js"></script>
         <script src="ng/utilities/filters.js"></script>
         <!-- endbuild -->
 
         <!-- build:js ng/skills.min.js -->
         <script src="ng/skills/skills.module.js"></script>
+        <script src="ng/skills/home-skills.directive.js"></script>
         <script src="ng/skills/skillsService.js"></script>
+        <script src="ng/skills/chartOptionsService.js"></script>
         <script src="ng/skills/skills.js"></script>
-        <script src="ng/skills/skills.directive.js"></script>
         <!-- endbuild -->
         <!-- build:js ng/project.min.js -->
         <!-- angular project last -->
         <script src="ng/projects/projects.module.js"></script>
+        <script src="ng/projects/projects.directive.js"></script>
         <script src="ng/projects/projectsService.js"></script>
         <script src="ng/projects/projects.js"></script>
-        <!-- endbuild -->
-        <!-- build:js ng/directives.min.js -->
-        <script src="ng/projects/projects.directive.js"></script>
         <!-- endbuild -->
         {% block extrajs %}{% endblock %}
     </body>

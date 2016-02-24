@@ -8,7 +8,7 @@
   function skillsPanel() {
     return {
       restrict: 'E',
-      templateUrl: 'ng/templates/skills-panel.html',
+      templateUrl: 'ng/templates/home-skills-panel.html',
       controller: 'Skills',
       controllerAs: 'sk'
     };

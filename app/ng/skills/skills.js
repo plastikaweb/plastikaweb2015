@@ -5,16 +5,17 @@
       .module('app.skills')
       .controller('Skills', Skills);
 
-    function Skills(skillsService, CHART_OPTIONS, $filter) {
+    function Skills(skillsService, chartOptionsService, $filter) {
 
-        var $self = this;
+        var $self = this,
+          chartOptions = chartOptionsService.getOptions();
+
         skillsService.getSkills()
           .success(function (data) {
               data = data.skills;
               for (var i in data) {
-                  data[i].options = angular.extend(data[i].options, CHART_OPTIONS);
+                  data[i].options = angular.extend(data[i].options, chartOptions);
               }
-              //TODO return the value not assign it to scope directly
               $self.list = $filter('filterPropByValue')(data, 'active', true);
           });
     }

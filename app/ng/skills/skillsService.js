@@ -1,17 +1,15 @@
 (function () {
-  'use strict';
+    'use strict';
 
-  angular.module('app.skills')
-    .factory('skillsService', skillsService);
+    angular.module('app.skills')
+      .factory('skillsService', skillsService);
 
-  function skillsService($http) {
-
-    var Service = {};
-    Service.getSkills = function () {
-      return $http.get('./data/skills.json');
-    };
-
-    return Service;
-  }
+    function skillsService($http) {
+        return {
+            getSkills: function () {
+                return $http.get('./data/skills.json');
+            }
+        };
+    }
 
 })();
