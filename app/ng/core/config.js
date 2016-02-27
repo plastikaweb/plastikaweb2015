@@ -12,7 +12,7 @@
           appTitle: 'Plastikaweb site',
           version: '1.0.1'
       })
-      .constant('FIREBASE_URL', 'https://blazing-torch-2654.firebaseio.com/');
+      .constant('FIREBASE_URL', 'https://plastikaweb.firebaseio.com/');
     ;
 
 })();

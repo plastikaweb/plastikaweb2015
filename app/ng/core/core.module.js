@@ -5,10 +5,8 @@
         /*
          * Angular modules
          */
-        'ngSanitize', 'ngRoute',
-        /*
-         * Our reusable cross app code modules
-         */
+        'ngSanitize',
+        'ngRoute',
 
         /*
          * 3rd Party modules

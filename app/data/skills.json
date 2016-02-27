@@ -1,11 +1,10 @@
 {
   "skills": [
     {
-      "id": 1,
       "name": "javascript",
       "slug": "javascript",
       "text": "Object Oriented approach, DOM manipulation, Ajax development, JSON format.",
-      "active": true,
+      "active": 1,
       "order": 1,
       "options": {
         "barColor": "#D0CC85",
@@ -14,11 +13,10 @@
       "percent": "85"
     },
     {
-      "id": 2,
       "name": "jquery",
       "slug": "jquery",
       "text": "DOM manipulation, Ajax calls, Promises, Events, Effects and transitions, styles manipulation.",
-      "active": true,
+      "active": 1,
       "order": 2,
       "options": {
         "barColor": "#B0D3E7",
@@ -27,11 +25,10 @@
       "percent": "80"
     },
     {
-      "id": 3,
       "name": "angularJS",
       "slug": "angularjs",
       "text": "Single Page Applications with a robust and modular approach. Also a little of <strong>backbone.js</strong> and <strong>ember.js</strong>.",
-      "active": true,
+      "active": 1,
       "order": 3,
       "options": {
         "barColor": "#B24949",
@@ -40,11 +37,10 @@
       "percent": "65"
     },
     {
-      "id": 4,
       "name": "HTML5",
       "slug": "html5",
       "text": "Semantic web, related APIs (drag and drop, svg, video, audio, canvas).",
-      "active": true,
+      "active": 1,
       "order": 4,
       "options": {
         "barColor": "#DD8573",
@@ -53,11 +49,10 @@
       "percent": "75"
     },
     {
-      "id": 5,
       "name": "CSS3",
       "slug": "css3",
       "text": "Styles, transforms, transitions and animations, media queries.",
-      "active": true,
+      "active": 1,
       "order": 5,
       "options": {
         "barColor": "#6DA9C9",
@@ -66,11 +61,10 @@
       "percent": "80"
     },
     {
-      "id": 6,
       "name": "Sass & Compass",
       "slug": "sass",
       "text": "Fast processing to standard CSS. Also a little of <strong>LESS</strong>, <strong>Stylus</strong> and <strong>Susy</strong>.",
-      "active": true,
+      "active": 1,
       "order": 6,
       "options": {
         "barColor": "#C08DA8",
@@ -79,11 +73,10 @@
       "percent": "60"
     },
     {
-      "id": 7,
       "name": "Twitter Bootstrap",
       "slug": "bootstrap",
       "text": "Responsive design, mobile first approach, components configuration.",
-      "active": true,
+      "active": 1,
       "order": 5,
       "options": {
         "barColor": "#62699A",
@@ -92,11 +85,10 @@
       "percent": "80"
     },
     {
-      "id": 8,
       "name": "Laravel",
       "slug": "laravel",
       "text": "MVC PHP framework with migrations, ORM, restful controllers and more. I also worked with <strong>Codeigniter</strong>.",
-      "active": false,
+      "active": 0,
       "order": 8,
       "options": {
         "barColor": "#D2B381",
@@ -105,11 +97,10 @@
       "percent": "50"
     },
     {
-      "id": 9,
       "name": "Facebook API",
       "slug": "facebook",
       "text": "Facebook applications, using the PHP API and the javascript SDK.",
-      "active": true,
+      "active": 1,
       "order": 9,
       "options": {
         "barColor": "#526884",
