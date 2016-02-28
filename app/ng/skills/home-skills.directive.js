@@ -8,8 +8,9 @@
   function skillsPanel() {
     return {
       restrict: 'E',
-      templateUrl: 'ng/templates/home-skills-panel.html',
+      templateUrl: '../ng/directives/home-skills-panel.html',
       controller: 'Skills',
+      replace: true,
       controllerAs: 'sk'
     };
   }

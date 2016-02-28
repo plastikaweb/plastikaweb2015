@@ -118,8 +118,8 @@ gulp.task('json', function() {
 });
 
 gulp.task('angular', function() {
-   return gulp.src('app/ng/templates/*.*')
-     .pipe(gulp.dest('dist/ng/templates'));
+   return gulp.src('app/ng/**/*.html')
+     .pipe(gulp.dest('dist/ng'));
 });
 
 gulp.task('fonts', function () {

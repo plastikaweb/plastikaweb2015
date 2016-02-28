@@ -13,6 +13,5 @@
           version: '1.0.1'
       })
       .constant('FIREBASE_URL', 'https://plastikaweb.firebaseio.com/');
-    ;
 
 })();

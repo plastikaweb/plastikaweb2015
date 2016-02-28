@@ -10,9 +10,9 @@
       config(function ($routeProvider) {
           $routeProvider.
             when('/home', {
-                templateUrl: 'ng/templates/home.html',
+                templateUrl: 'ng/templates/home.html'
             }).
-            when('/skills', {
+            when('/info', {
                 templateUrl: 'ng/templates/skills.html'
             }).
             when('/projects/:name', {
