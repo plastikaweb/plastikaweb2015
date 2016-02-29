@@ -1,15 +1,14 @@
-<div class="skill-item col-md-3 col-sm-6 col-xs-12"
-     ng-repeat="skill in sk.list">
+<div>
   <div easypiechart
        class="chart easyPieChart element-top-20 element-bottom-20"
-       options="skill.options" percent="skill.percent">
-    <span>{{ skill.percent }}</span>
-    <img ng-src="assets/images/skills/{{ skill.slug }}.png"
-         alt="{{ skill.name }}"/>
+       options="skillsList.options" percent="skillsList.percent">
+    <span>{{ skillsList.percent }}</span>
+    <img ng-src="assets/images/skills/{{ skillsList.slug }}.png"
+         alt="{{ skillsList.name }}"/>
   </div>
   <div class="bottom-chart">
-    <h2>{{ skill.name }}</h2>
+    <h2>{{ skillsList.name }}</h2>
 
-    <p ng-bind-html="skill.text"></p>
+    <p ng-bind-html="skillsList.text"></p>
   </div>
 </div>

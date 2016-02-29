@@ -3,9 +3,10 @@
 
     angular.module('app', [
         'app.core',
+        'app.home',
         'app.skills',
         'app.projects',
-        'app.utilities'
+        'app.utils'
     ]).
       config(function ($routeProvider) {
           $routeProvider.

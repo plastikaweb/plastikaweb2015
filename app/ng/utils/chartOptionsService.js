@@ -1,7 +1,7 @@
 (function () {
     'use strict';
 
-    angular.module('app.skills')
+    angular.module('app.utils')
       .factory('chartOptionsService', chartOptionsService);
 
     function chartOptionsService() {

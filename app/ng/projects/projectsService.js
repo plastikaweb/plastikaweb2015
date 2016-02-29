@@ -4,22 +4,9 @@
     angular.module('app.projects')
       .factory('projectsService', projectsService);
 
-    function projectsService($http, $window) {
+    function projectsService(firebaseService, $window) {
 
-        var Service = {};
-
-        /**
-         * getProjects
-         * @returns {HttpPromise}
-         */
-        Service.getProjects = function () {
-            return $http.get('./data/projects.json');
-        };
-
-        /**
-         * isotopeInit
-         */
-        Service.isotopeInit = function () {
+        function isotopeInit() {
 
             $('.masonry').each(function (index, element) {
                 var $container = $(element);
@@ -108,23 +95,24 @@
                         Waypoint.refreshAll();
                     });
 
-                    Service.onResize();
+                    onResize();
 
                 });
             });
-        };
+        }
 
-        /**
-         * onResize window
-         */
-        Service.onResize = function () {
+        function onResize() {
             var w = angular.element($window);
             w.bind('resize', function () {
-                Service.isotopeInit();
+                isotopeInit();
             });
-        };
+        }
 
-        return Service;
+        return {
+            getProjects: function () {
+                return firebaseService.getData('projects');
+            }
+        };
     }
 
 })();

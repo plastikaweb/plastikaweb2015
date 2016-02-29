@@ -4,15 +4,13 @@
     angular.module('app.skills')
       .factory('skillsService', skillsService);
 
-    function skillsService(FIREBASE_URL, chartOptionsService, $firebaseArray) {
+    function skillsService(chartOptionsService, firebaseService) {
 
-        var ref = new Firebase(FIREBASE_URL + 'skills'),
-          chartOptions = chartOptionsService.getOptions();
+        var chartOptions = chartOptionsService.getOptions();
 
         return {
             getSkills: function () {
-                var data = $firebaseArray(ref.orderByChild('active')
-                  .limitToLast(8));
+                var data = firebaseService.getData('skills');
                 data.$loaded().then(function () {
                     angular.forEach(data, function (value, key) {
                         value.options = angular.extend(value.options, chartOptions);

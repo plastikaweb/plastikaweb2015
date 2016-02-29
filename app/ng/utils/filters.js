@@ -1,7 +1,7 @@
 (function () {
     'use strict';
 
-    angular.module('app.utilities', [])
+    angular.module('app.utils', [])
       .filter('filterPropByValue', function () {
           return function (items, propName, propValue) {
               var result = [];
@@ -13,4 +13,4 @@
               return result;
           };
       });
-}());
+})();
