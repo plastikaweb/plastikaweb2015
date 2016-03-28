@@ -1,26 +1,12 @@
-<div
-  class="masonry-item portfolio-item filter-people"
-  isotope-item="isotope-item"
-  ng-repeat="project in pj.list | orderBy:'-order' | limitTo:6 track by $index"
-  data-title="{{ project.name }}">
-  <div
-    class="figure image-filter-blur image-filter-onhover fade-in from-right text-center figcaption-middle normalwidth">
-
-    <a class="figure-image magnific"
-       href="assets/images/projects/{{ project.slug }}/{{ project.slug }}-1.jpg"
-       target="_self">
-      <img alt="{{ project.name }}" class="normalwidth"
-           ng-src="assets/images/projects/{{ project.slug }}/{{ project.slug }}-1.jpg">
-
-      <div class="figure-overlay">
-        <div class="figure-overlay-container">
-          <div class="figure-caption">
-            <h3 class=
-                  "figure-caption-title bordered bordered-small">
-              {{ project.name }}</h3>
-          </div>
-        </div>
+<a class="figure-image magnific-vimeo" href="project/{{ projectsList.slug }}" target="_self">
+  <img alt="{{ projectsList.name }}" class="normalwidth"
+       src="assets/images/projects/{{ projectsList.slug }}/{{ projectsList.slug }}-1.jpg">
+  <div class="figure-overlay">
+    <div class="figure-overlay-container">
+      <div class="figure-caption">
+        <h3 class="figure-caption-title bordered bordered-small">
+          {{ projectsList.name }}</h3>
       </div>
-    </a>
+    </div>
   </div>
-</div>
+</a>

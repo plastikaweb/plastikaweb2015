@@ -5,7 +5,7 @@
       .module('app.home')
       .controller('Home', Home);
 
-    function Home(skillsService) {
+    function Home(skillsService, projectsService) {
         //presentation
         this.hello = 'Hello, my name is Carlos Matheu';
         this.more = 'I am a creative web developer specialised in Frontend, specially javascript, CSS3 and HTML5.';
@@ -15,7 +15,7 @@
         this.skills = skillsService.getSkills();
 
         //projects
-        this.projectsTile = '';
+        this.projectsTitle = 'My latest works';
         this.projects = projectsService.getProjects();
     }
 

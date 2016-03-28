@@ -11,10 +11,10 @@
       <div class="row vertical-default">
         <div class="col-md-12  text-default small-screen-default">
           <h1
-          class="text-center element-top-160 element-bottom-20 text-light os-animation bigger default animated fadeIn"
-          data-os-animation="fadeIn" data-os-animation-delay="0.1s"
-          style="-webkit-animation-delay: 0.1s; animation-delay: 0.1s;">
-          {$ hm.hello $}</h1>
+            class="text-center element-top-160 element-bottom-20 text-light os-animation bigger default animated fadeIn"
+            data-os-animation="fadeIn" data-os-animation-delay="0.1s"
+            style="-webkit-animation-delay: 0.1s; animation-delay: 0.1s;">
+            {$ hm.hello $}</h1>
 
           <div
             class="divider-border divider-border-center element-top-20 element-bottom-20 animated fadeIn"
@@ -26,10 +26,10 @@
             <div class="col-md-2 text-default small-screen-default"></div>
             <div class="col-md-8 text-default small-screen-default">
               <h2
-              class="text-center element-top-0 element-bottom-40 text-light normal light animated fadeIn"
-              data-os-animation="fadeIn" data-os-animation-delay="0.3s"
-              style="-webkit-animation-delay: 0.3s; animation-delay: 0.3s;">
-              {$ hm.more $}</h2>
+                class="text-center element-top-0 element-bottom-40 text-light normal light animated fadeIn"
+                data-os-animation="fadeIn" data-os-animation-delay="0.3s"
+                style="-webkit-animation-delay: 0.3s; animation-delay: 0.3s;">
+                {$ hm.more $}</h2>
             </div>
             <div class="col-md-2 text-default small-screen-default"></div>
           </div>
@@ -42,68 +42,63 @@
 
   <section class="section container">
 
-          <h1 class="text-center element-top-70 big" data-os-animation="fadeIn"
-              data-os-animation-delay="0s">
-            {$ hm.skillsTitle $}
-          </h1>
-          <div class="divider-border divider-border-center element-top-10 element-bottom-10"
-               data-os-animation="fadeIn" data-os-animation-delay="0.1s" style="height:3px;">
-            <div class="divider-border-inner" style="width:60px;">
-            </div>
-          </div>
+    <h1 class="text-center element-top-70 big" data-os-animation="fadeIn"
+        data-os-animation-delay="0s">
+      {$ hm.skillsTitle $}
+    </h1>
 
-          <!-- skills directive -->
-        <div class="row">
-          <skills-panel skills-list="skills"
-                        ng-repeat="skills in hm.skills"
-                        class="skill-item col-md-3 col-sm-6 col-xs-12">
-          </skills-panel>
-        </div>
+    <div class="divider-border divider-border-center element-top-10 element-bottom-10"
+         data-os-animation="fadeIn" data-os-animation-delay="0.1s" style="height:3px;">
+      <div class="divider-border-inner" style="width:60px;">
+      </div>
+    </div>
+
+    <!-- skills directive -->
+    <div class="row">
+      <skills-panel skills-list="skills"
+                    ng-repeat="skills in hm.skills"
+                    class="skill-item col-md-3 col-sm-3 col-xs-6">
+      </skills-panel>
+    </div>
 
   </section>
 
-  <!-- some projects -->
+  <section class="section container element-bottom-60">
+    <h1 class="text-center element-top-70 big" data-os-animation="fadeIn"
+        data-os-animation-delay="0s">
+      {$ hm.projectsTitle $}
+    </h1>
 
-  <!--<section class="section">
+    <div class="divider-border divider-border-center element-top-10 element-bottom-10"
+         data-os-animation="fadeIn" data-os-animation-delay="0.1s" style="height:3px;">
+      <div class="divider-border-inner" style="width:60px;">
+      </div>
+    </div>
 
-    <div class="container">
+    <!-- projects home directive -->
+    <div class="portfolio-container element-bottom-60">
       <div class="row">
         <div class="col-md-12">
-          <h1 class="text-center element-top-70 big"
-              data-os-animation="fadeIn" data-os-animation-delay="0s">
-            My latest work
-          </h1>
-
-          <div class="divider-border divider-border-center element-top-10 element-bottom-10"
-               data-os-animation="fadeIn" data-os-animation-delay="0.1s"
-               style="height:3px;">
-            <div class="divider-border-inner" style="width:60px;">
-            </div>
-          </div>
-
-          <p class="lead text-center center element-bottom-40" data-os-animation="none" data-os-animation-delay="0s">
-            I put all my 10 years of development experience into every project.<br>
-            Take a look at some of my latest work.</p>
-
-          <div class="portfolio-container element-bottom-60">
-            <div class="row">
-              <div class="col-md-12">
-                <div class="portfolio-header clearfix">
-                  <div class="portfolio-filters pull-right">
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div projects-panel class="portfolio masonry no-transition magnific-all"
-                 data-col-lg="3" data-col-md="3" data-col-sm="2" data-col-xs="1" data-layout="fitRows" data-padding="15">
-            </div>
-
+          <div class="portfolio-header clearfix">
+            <div class="portfolio-filters pull-right"> </div>
           </div>
         </div>
       </div>
+      <div class="portfolio masonry magnific-all isotope use-masonry"
+           data-padding="15" data-col-sxs="1" data-col-xs="2" data-col-sm="4" data-col-md="4" data-col-lg="4"
+           data-layout="fitRows">
+        <projects-panel projects-list="projects"
+                      ng-repeat="projects in hm.projects"
+                      class="masonry-item portfolio-item isotope-item">
+        </projects-panel>
+      </div>
     </div>
-    </div>
-  </section>-->
-
+    <!-- <div class="portfolio-container element-bottom-60">
+      <ul isotope-container="isotope-container">
+        <projects-panel projects-list="projects"
+                        ng-repeat="projects in hm.projects">
+        </projects-panel>
+      </ul>
+    </div>-->
+  </section>
 </article>

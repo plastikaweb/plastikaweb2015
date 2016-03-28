@@ -37,7 +37,8 @@
     "firebase": "~2.2.2",
     "angularfire": "~1.0.0",
     "angular-isotope": "~0.1.14",
-    "angular-route": "~1.3.14"
+    "angular-route": "~1.3.14",
+    "angular-dynamic-layout": "^0.1.11"
   },
   "resolutions": {
     "jquery": "~2.1.1"

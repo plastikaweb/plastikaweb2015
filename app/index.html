@@ -3,9 +3,13 @@
 {% set title = "Plastikaweb" %}
 {% set activeMenu = "Home" %}
 
+{% block extrajs %}
+<!-- build:js assets/js/revolution.min.js -->
+<script type="text/javascript" src="scripts/tools.min.js"></script>
+<script type="text/javascript" src="scripts/revolution.min.js"></script>
+<!-- endbuild -->
+{% endblock %}
 
 {% block content %}
-
 <ng-view></ng-view>
-
 {% endblock %}

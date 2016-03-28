@@ -1,3 +1,21 @@
+ul, ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
 .skill-item {
   margin: 0 auto;
+}
+.isotope-item {
+  width: 270px;
+}
+@media (max-width: 1199px) {
+  .isotope-item {
+    width: 300px;
+  }
+}
+@media (max-width: 939px) {
+  .isotope-item {
+    width: 250px;
+  }
 }

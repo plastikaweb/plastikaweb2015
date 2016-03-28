@@ -2,11 +2,7 @@
     'use strict';
 
     angular.module('app', [
-        'app.core',
-        'app.home',
-        'app.skills',
-        'app.projects',
-        'app.utils'
+        'app.core'
     ]).
       config(function ($routeProvider) {
           $routeProvider.

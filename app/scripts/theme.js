@@ -138,6 +138,129 @@ jQuery(document).ready(function( $ ) {
         });
     });
 
+    // Portfolio Isotope
+    // ======================
+
+    function isotopeInit() {
+        $('.masonry').each( function( index, element ) {
+            var $container = $(element);
+            var $items = $container.find( '.masonry-item' );
+            var padding = $container.attr( 'data-padding' );
+            var isFullWidth = $container.parents( '.container-fullwidth' ).length > 0;
+            // On fullscreen portfolio add negative margin on left and right and add 4pixel upon that for the loss after rounding
+            var containerPadding = -padding / 2;
+
+            $container.css({
+                margin: '0 ' + containerPadding + 'px'
+            });
+            $container.imagesLoaded().always( function( loadedContainer ) {
+                setTimeout( function() {
+                    var columns = 3,
+                      screenWidth = $(window).width(),
+                      wideColumns = 2,
+                      sxs = $container.attr( 'data-col-sxs'),
+                      xs = $container.attr( 'data-col-xs'),
+                      sm = $container.attr( 'data-col-sm'),
+                      md = $container.attr( 'data-col-md'),
+                      lg = $container.attr( 'data-col-lg');
+
+                    if (screenWidth < 450 && sxs) {
+                        columns = sxs;
+                        wideColumns = 1;
+                    }
+                    else if (screenWidth < 768 && xs) {
+                        columns = xs;
+                        wideColumns = 1;
+                    }
+                    else if (screenWidth < 992 && sm) {
+                        columns = sm;
+                        wideColumns = 1;
+                    }
+                    else if (screenWidth < 1200 && md) {
+                        columns = md;
+                        wideColumns = 2;
+                    }
+                    else if (screenWidth > 1200 && lg) {
+                        columns = lg;
+                        wideColumns = 2;
+                    }
+
+                    // calculate item width and paddings
+                    var itemWidth;
+                    if ( $container.hasClass( 'use-masonry' ) ) {
+                        $items.each(function() {
+                            // Set the masonry column width
+                            itemWidth = Math.floor( $container.width() / columns );
+
+                            var item  = $(this);
+                            if( item.hasClass( 'masonry-wide' ) ) {
+                                item.css( 'width', itemWidth * wideColumns );
+                            }
+                            else {
+                                item.css( 'width', itemWidth );
+                            }
+                        });
+                    }
+                    else {
+                        itemWidth = Math.floor( $container.width() / columns );
+                        $items.css( 'width', itemWidth );
+                    }
+
+                    $items.find('.figure,.post-masonry-inner').css( 'padding', padding / 2 + 'px' );
+
+                    // wait for possible flexsliders to render before rendering isotope
+                    $container.isotope( {
+                        itemSelector: '.masonry-item',
+                        layoutMode: $container.attr( 'data-layout' ),
+                        resizable: true,
+                        masonry: {
+                            columnWidth: itemWidth,
+                            gutter: padding
+                        }
+                    }, function(){
+                        $container.removeClass( 'no-transition' );
+                        onScrollInit( $items.find( '.portfolio-os-animation' ), $container );
+                        onScrollInit( $items.find( '.blog-os-animation' ), $container );
+                    });
+                },200);
+            });
+        });
+    }
+
+    // Re initialise isotope on window resize
+    $(window).smartresize(function(){
+        isotopeInit();
+    });
+
+    // Init the isotope
+    isotopeInit();
+
+    // Portfolio Filters
+    // ======================
+
+    $('.portfolio-filter').click( function() {
+        var $button = $(this);
+        var filter = $button.attr( 'data-filter' );
+        var $filtersRow = $button.parents('div.row');
+        $filtersRow.find( '.portfolio-title span' ).text( $button.text() );
+        var $portfolio = $filtersRow.next();
+        $portfolio.isotope( { filter: filter } );
+    });
+
+    $('.portfolio-order').click( function() {
+        var $button = $(this);
+        var order = $button.attr( 'data-value' );
+        var $portfolio = $button.parents( 'div.row' ).next();
+        $portfolio.isotope( { sortAscending: order === 'true' } );
+    });
+
+    $('.portfolio-sort').click( function() {
+        var $button = $(this);
+        var sort = $button.attr( 'data-sort' );
+        var $portfolio = $button.parents('div.row').next();
+        $portfolio.isotope( { sortBy: sort } );
+    });
+
     // Theme Sections
     // ======================
 
@@ -365,6 +488,29 @@ jQuery(document).ready(function( $ ) {
         }
     });
 
+    // Init On scroll animations
+    function onScrollInit( items, trigger ) {
+        items.each( function() {
+            var osElement = $(this),
+              osAnimationClass = osElement.attr('data-os-animation'),
+              osAnimationDelay = osElement.attr('data-os-animation-delay');
+
+            osElement.css({
+                '-webkit-animation-delay':  osAnimationDelay,
+                '-moz-animation-delay':     osAnimationDelay,
+                'animation-delay':          osAnimationDelay
+            });
+
+            var osTrigger = ( trigger ) ? trigger : osElement;
+
+            osTrigger.waypoint(function() {
+                osElement.addClass('animated').addClass(osAnimationClass);
+            },{
+                triggerOnce: true,
+                offset: '90%'
+            });
+        });
+    }
 
     // Goto top button
     // ======================
@@ -656,11 +802,4 @@ jQuery(document).ready(function( $ ) {
         });
     }
 
-    // woocommerce
-
-    // if country changed and js injects text input make sure it has a form-control class
-    $('body').on( 'country_to_state_changed', function(e, data) {
-        $('.input-text').addClass('form-control');
-        $('#calc_shipping_state').addClass('form-control');
-    });
 });
