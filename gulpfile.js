@@ -12,7 +12,7 @@ var gulp = require('gulp'),
       stylesPath: 'app/styles/**/*.scss',
       scriptsPath: 'app/scripts/**/*.js',
       imagesPath: 'app/assets/images/**/*',
-      ngPathJs: 'app/ng/**/*.js',
+      ngPathJs: 'app/app/**/*.js',
       jsonPath: 'app/data/**/*',
       build: ['jshint', 'html', 'images', 'json', 'angular', 'fonts', 'extras', 'minify', 'htmlpretty']
   };
@@ -72,7 +72,7 @@ gulp.task('minify', ['html'], function () {
       .pipe($.replace, 'bower_components/bootstrap-sass-official/assets/fonts/bootstrap', 'fonts');
 
     // rename js to umnunified version
-    gulp.src(['dist/js/*.js', 'dist/ng/*.js'])
+    gulp.src(['dist/js/*.js', 'dist/app/*.js'])
       .pipe($.rename(function (path) {
           path.basename = path.basename.replace(/\.min/g, '');
           return path;
@@ -82,7 +82,7 @@ gulp.task('minify', ['html'], function () {
       }));
 
     // now minify JS
-    gulp.src(['dist/js/*.js', 'dist/ng/*.js'])
+    gulp.src(['dist/js/*.js', 'dist/app/*.js'])
       .pipe($.ngAnnotate({
           // true helps add where @ngInject is not used. It infers.
           // Doesn't work with resolve, so we must be explicit there
@@ -118,8 +118,8 @@ gulp.task('json', function() {
 });
 
 gulp.task('angular', function() {
-   return gulp.src('app/ng/**/*.html')
-     .pipe(gulp.dest('dist/ng'));
+   return gulp.src('app/app/**/*.html')
+     .pipe(gulp.dest('dist/app'));
 });
 
 gulp.task('fonts', function () {
@@ -219,7 +219,7 @@ gulp.task('watch', ['connect'], function () {
         '.tmp/*.html',
         '.tmp/styles/**/*.css',
         'app/scripts/**/*.js',
-        'app/ng/**/*',
+        'app/app/**/*',
         'app/images/**/*'
     ]).on('change', $.livereload.changed);
 

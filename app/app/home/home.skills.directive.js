@@ -8,7 +8,7 @@
   function skillsPanel() {
     return {
       restrict: 'E',
-      templateUrl: '../ng/directives/home-skills-panel.html',
+      templateUrl: '../app/home/home-skills-panel.html',
       replace: true,
       scope: {
         skillsList: '='

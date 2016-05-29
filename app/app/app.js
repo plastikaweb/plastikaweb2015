@@ -7,13 +7,10 @@
       config(function ($routeProvider) {
           $routeProvider.
             when('/home', {
-                templateUrl: 'ng/templates/home.html'
-            }).
-            when('/info', {
-                templateUrl: 'ng/templates/skills.html'
+                templateUrl: 'app/home/home.html'
             }).
             when('/projects/:name', {
-                templateUrl: 'ng/templates/project.html'
+                templateUrl: 'app/projects/project.html'
             }).
             otherwise({
                 redirectTo: '/home'

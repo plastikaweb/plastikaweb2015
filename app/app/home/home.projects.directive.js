@@ -85,7 +85,7 @@
 
         return {
             restrict: 'E',
-            templateUrl: '../ng/directives/home-projects-panel.html',
+            templateUrl: '../app/home/home-projects-panel.html',
             replace: true,
             scope: {
                 projectsList: '='
